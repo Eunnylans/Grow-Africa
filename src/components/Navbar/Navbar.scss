@@ -1,0 +1,66 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem; // Adjust as needed for left and right spacing
+    max-width: 1440px;
+    height: 96px;
+    width: 100%;
+    border-bottom: 1px solid #ddd; // Optional: Better border definition
+  }
+  
+  .logo {
+    font-family: "DM Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  
+    li {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .auth-links {
+    display: flex;
+    gap: 16px;
+  
+    .btn-in,
+    .btn-up {
+      padding: 12px 20px;
+      border-radius: 200px;
+      cursor: pointer;
+    }
+  
+    .btn-in {
+      border: 1px solid #6b911b;
+      background: transparent;
+  
+      &:hover {
+        background-color: lightgray;
+        color: #6b911b;
+      }
+    }
+  
+    .btn-up {
+      background: #6b911b;
+      color: white;
+      border: 1px solid #6b911b;
+  
+      &:hover {
+        background-color: lightgray;
+        color: #6b911b;
+      }
+    }
+  }
+  
