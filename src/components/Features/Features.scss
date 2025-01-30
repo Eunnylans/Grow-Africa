@@ -2,11 +2,7 @@
 
 .features {
   width: 100%;
-  height: 638px;
-  top: 80px;
-  left: 112px;
-  gap: 136px;
-  opacity: 1;
+  height: auto;  // ✅ Change from 100vh to auto so content expands naturally
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,21 +13,18 @@
   .feature-left {
     flex: 1;
     padding-right: 20px;
-    width: 488px;
-    height: 400px;
-    gap: 40px;
-    opacity: 1;
+    max-width: 488px;
+    display: flex;  // ✅ Ensures inner-up and inner-down stack properly
+    flex-direction: column;
+    overflow: hidden;
 
     .inner-up {
-      width: 488px;
-      height: 200px;
+      width: 100%;
       gap: 16px;
-      opacity: 1;
 
       h2 {
         margin-bottom: 1rem;
         color: #6b911b;
-        width: 432px;
         font-family: "DM Sans";
         font-size: 36px;
         font-weight: 600;
@@ -40,43 +33,30 @@
       }
 
       .paragraph {
-        width: 488px;
-        height: 96px;
+        width: 100%;
         font-family: "DM Sans";
         font-size: 18px;
         line-height: 24px;
         text-align: left;
+        color: #333;
       }
     }
 
     .inner-down {
-      width: 470px;
-      height: 160px;
-      gap: 20px;
-      opacity: 1;
+      width: 100%;
+      height: auto;
 
       h4 {
         color: #6b911b;
-        width: 470px;
-        height: 28px;
-        gap: 0px;
-        opacity: 0px;
         font-family: "DM Sans";
         font-size: 20px;
         font-weight: 600;
-        line-height: 28px;
-        letter-spacing: -0.004em;
         text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
         margin-bottom: 1rem;
       }
 
       ul {
-        width: Fill (470px) px;
-        height: Hug (112px) px;
-        gap: 20px;
-        opacity: 0px;
+        padding-left: 0;
 
         li {
           display: flex;
@@ -89,25 +69,12 @@
           font-size: 18px;
           font-weight: 400;
           line-height: 24px;
-          letter-spacing: -0.004em;
           text-align: left;
-          text-underline-position: from-font;
-          text-decoration-skip-ink: none;
-
-          width: Hug (442px) px;
-          height: Hug (24px) px;
-          gap: 16px;
-          opacity: 0px;
 
           i {
-            margin-right: 10px; // Adds space between the icon and the text
-            color: #6b911b; // Icon color
-            font-size: 1.4rem; // Icon size
-
-            width: 24px;
-            height: 24px;
-            gap: 0px;
-            opacity: 0px;
+            margin-right: 10px;
+            color: #6b911b;
+            font-size: 1.4rem;
           }
         }
       }
@@ -124,22 +91,73 @@
       max-width: 100%;
       height: auto;
       border-radius: 32px;
+    }
+  }
 
-      
+  // ✅ Responsive Fix
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 3rem;
+    gap: 40px;
+
+    .feature-left {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;  // ✅ Adds spacing before image
+      order: -1;  // ✅ Moves text above image
+    }
+
+    .feature-right {
+      width: 100%;
+      text-align: center;
     }
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
+    .inner-up h2 {
+      font-size: 28px;
+    }
+
+    .paragraph {
+      font-size: 16px;
+    }
+
+    .inner-down h4 {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem;
 
     .feature-left {
-      padding-right: 0;
-      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem; // ✅ Adds spacing before image
+      order: -1; // ✅ Moves text above image
     }
 
     .feature-right {
-      width: 80%;
+      width: 100%;
+      text-align: center;
+    }
+
+    .inner-up h2 {
+      font-size: 24px;
+    }
+
+    .paragraph {
+      font-size: 14px;
+      margin-bottom: 2rem;
+    }
+
+    .inner-down h4 {
+      font-size: 16px;
+    }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
     }
   }
 }

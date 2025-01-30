@@ -1,0 +1,116 @@
+.cta-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+  
+    .cta-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      gap: 3rem;
+      
+      .cta-image {
+        flex: 1;
+        img {
+          width: 100%;
+          max-height: 400px;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+      }
+  
+      .cta-content {
+        flex: 1;
+        text-align: left;
+        max-width: 600px;
+  
+        h2 {
+          font-size: 2.5rem;
+          color: #6b911b;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          font-family: "DM Sans", sans-serif;
+          line-height: 1.3;
+        }
+  
+        p {
+          font-size: 1.2rem;
+          color: #9b9d8e;
+          margin-bottom: 2rem;
+          font-family: "DM Sans", sans-serif;
+        }
+  
+        .cta-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #6b911b;
+          color: white;
+          font-size: 1.2rem;
+          font-weight: bold;
+          padding: 1rem 2rem;
+          border-radius: 50px;
+          text-decoration: none;
+          transition: background 0.3s ease;
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+  
+          font-family: "DM Sans", sans-serif;
+          text-align: center;
+  
+          &:hover {
+            background-color: #5a7f15;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      .cta-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+  
+        .cta-content {
+          max-width: 90%;
+          text-align: center;
+        }
+  
+        .cta-button {
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 3rem 1rem;
+  
+      .cta-container {
+        gap: 1.5rem;
+  
+        .cta-content {
+          h2 {
+            font-size: 2rem;
+          }
+  
+          p {
+            font-size: 1rem;
+          }
+  
+          .cta-button {
+            font-size: 1rem;
+            padding: 0.8rem 1.5rem;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+  

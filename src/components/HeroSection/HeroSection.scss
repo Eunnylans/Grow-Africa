@@ -1,10 +1,27 @@
-
 .hero {
     background: url("../../assets/hero-bg.png") no-repeat center center/cover;
-    width: 1440px;
-    height: 702px;
+    width: 100%; // Make the width 100% to fill the container
+    height: 702px; // Set a fixed height for desktop
     gap: 0px;
-    opacity: 0px;
+    opacity: 1; // Ensure the opacity is visible
     text-align: center;
     padding: 4rem 0;
+    transition: all 0.3s ease-in-out; // Optional: to make transitions smoother when resizing
+  
+    // Mobile-first approach, set styles for smaller screens first
+    @media (max-width: 1024px) {
+      height: 500px; // Adjust height for tablets
+      padding: 3rem 0; // Adjust padding for tablets
+    }
+  
+    @media (max-width: 768px) {
+      height: 400px; // Reduce height for mobile
+      padding: 2rem 0; // Reduce padding for mobile
+    }
+  
+    @media (max-width: 480px) {
+      height: 220px; // Reduce height even further for very small screens
+      padding: 1.5rem 0; // Adjust padding for very small screens
+    }
   }
+  

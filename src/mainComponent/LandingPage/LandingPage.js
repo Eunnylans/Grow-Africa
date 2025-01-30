@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import CallToAction from "../../components/CallToAction/CallToAction.js";
+import CTASection from "../../components/CTASection/CTASection.js";
 import Features from "../../components/Features/Features.js";
 import Footer from "../../components/Footer/Footer.js";
 import HeroSection from "../../components/HeroSection/HeroSection";
@@ -15,7 +15,7 @@ const LandingPage = () => {
       <Features />
       <HowItWorks />
       <Testimonials />
-      <CallToAction />
+      <CTASection />
       <Footer />
     </Fragment>
   );
