@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "./Navbar.scss";
+import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom"; // Import Link for navigation
+import "./Navbar.scss";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,10 +29,11 @@ const Navbar = () => {
       {/* Navigation Menu */}
       <div className={`menu ${isMenuOpen ? "open" : ""}`}>
         <ul className="nav-links">
-          <li onClick={toggleMenu}>About Us</li>
-          <li onClick={toggleMenu}>Portfolio</li>
-          <li onClick={toggleMenu}>Testimonials</li>
-          <li onClick={toggleMenu}>Contact</li>
+        <li onClick={toggleMenu}><Link to="/">Home</Link></li> {/* Link added */}
+          <li onClick={toggleMenu}><Link to="/about-us">About Us</Link></li> {/* Link added */}
+          <li onClick={toggleMenu}><Link to="/portfolio">Portfolio</Link></li> {/* Link added */}
+          <li onClick={toggleMenu}><Link to="/testimonials">Testimonials</Link></li> {/* Link added */}
+          <li onClick={toggleMenu}><Link to="/contact">Contact</Link></li> {/* Link added */}
         </ul>
 
         {/* Authentication Links */}

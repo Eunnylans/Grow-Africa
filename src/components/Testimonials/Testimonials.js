@@ -4,24 +4,30 @@ import John from "../../ux-ux-designs/Testimonial1.png";
 import Obinna from "../../ux-ux-designs/Testimonial2.png";
 import Chika from "../../ux-ux-designs/Testimonial3.png";
 
+// Get current date
+const getCurrentDate = () => {
+  const options = { day: "2-digit", month: "long", year: "numeric" };
+  return new Date().toLocaleDateString("en-GB", options);
+};
+
 const testimonials = [
   {
     name: "John Adedeji",
     message: "Cosmos Agritech transformed my farming business!",
-    date: "24 August 2024",
-    image: John // Replace with actual image
+    date: getCurrentDate(),
+    image: John
   },
   {
     name: "Obinna John",
     message: "I'm grateful for the support from Cosmos.",
-    date: "24 August 2024",
-    image: Obinna // Replace with actual image
+    date: getCurrentDate(),
+    image: Obinna
   },
   {
     name: "Chika Nwosu",
-    message: "Investing Cosmos was a game changer in the agric sector",
-    date: "17 December 2024",
-    image: Chika, // Replace with actual image
+    message: "Investing in Cosmos was a game changer in the agric sector",
+    date: getCurrentDate(),
+    image: Chika
   },
 ];
 

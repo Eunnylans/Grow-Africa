@@ -28,21 +28,28 @@
       align-items: center;
       gap: 2rem;
     }
-  
+
+
     .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-  
-      li {
-        cursor: pointer;
-        padding: 0.5rem 1rem;
-  
-        &:hover {
-          text-decoration: underline;
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        text-decoration: none;
+      
+        li {
+          cursor: pointer;
+          padding: 0.5rem 1rem;
+          text-decoration: none;
+          color: #000000; // Set default color to black
+          font-family: "DM Sans", sans-serif; // Set font to DM Sans
+      
+          &:hover {
+            color: #6b911b; // Change color to green when hovering
+            text-decoration: underline; // Underline on hover
+          }
         }
       }
-    }
+      
   
     .auth-links {
       display: flex;
