@@ -1,0 +1,64 @@
+/* PortfolioPage.scss */
+
+.portfolio {
+    font-family: Arial, sans-serif;
+    color: #333;
+    
+    .hero {
+      background: url("../../ux-ux-designs/Aboutus-hero.png") center/cover no-repeat;
+      text-align: center;
+      padding: 50px 0;
+      color: white;
+      font-size: 2rem;
+    }
+  
+    .why-choose {
+      text-align: center;
+      padding: 40px;
+  
+      .benefits {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+  
+      .benefit {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        width: 200px;
+      }
+    }
+  
+    .investment-opportunities {
+      padding: 40px;
+  
+      .opportunities {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+  
+      .opportunity {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 250px;
+      }
+  
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+  
+    .call-to-action {
+      text-align: center;
+      padding: 50px;
+      background: #e0f7e0;
+      font-size: 1.5rem;
+    }
+  }
+  
