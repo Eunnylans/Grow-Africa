@@ -1,36 +1,86 @@
 .testimonials {
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+  .happy-investors {
     text-align: center;
-    font-family: Arial, sans-serif;
+    padding: 50px;
+    background-color: #fff;
+    position: relative;
+    height: 100vh; // Full height of the viewport
   
-    .hero {
-      padding: 50px 20px;
-    }
-  
-    .video-section {
-      padding: 40px 20px;
-  
-      .video-thumbnail {
-        width: 80%;
-        max-width: 600px;
-        margin: 0 auto;
-        height: 300px;
-        background: #ddd;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-      }
-  
-      .play-button {
-        background: white;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-      }
-    }
-  
-    .testimonials {
+    .investors-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; // Spreads images evenly
+      align-items: center; // Centers images vertically
+      padding: 20px;
+  
+      .investor-image {
+        width: 80px; // Increase image size
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        position: absolute; // Allows free positioning
+        animation: floatAnimation 5s infinite alternate ease-in-out;
+      }
+    }
+  
+    h2, p {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.8); // Light background to make text readable
+      padding: 10px;
+      display:flex;
+      flex-direction: column;
+   
+    }
+  }
+  
+  // Floating animation for images
+  @keyframes floatAnimation {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  
+  
+  
+
+  .video-section {
+    padding: 40px 20px;
+
+    .video-thumbnail {
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+      height: 300px;
+      background: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+    }
+
+    .play-button {
+      background: white;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  .testimonials {
+    /* display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
@@ -54,20 +104,30 @@
           width: 100%;
           border-radius: 10px;
         }
-      }
-    }
-  
-    .cta {
-      padding: 40px;
-      .investment-button {
-        background: #4caf50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-      }
+      } */
+
+    padding: 50px 20px;
+    background: url("../../ux-ux-designs/Testimo1.png") no-repeat center
+      center/cover;
+    width: 100%; // Make the width 100% to fill the container
+    height: 250vh; // Set a fixed height for desktop
+    gap: 0px;
+    opacity: 1; // Ensure the opacity is visible
+    text-align: center;
+    padding: 4rem 0;
+    transition: all 0.3s ease-in-out; // Optional: to make transitions smoother when resizing
+  }
+
+  .cta {
+    padding: 40px;
+    .investment-button {
+      background: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
     }
   }
-  
+}

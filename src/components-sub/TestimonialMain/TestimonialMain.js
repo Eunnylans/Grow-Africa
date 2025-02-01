@@ -1,5 +1,24 @@
 import React from "react";
 import "./TestimonialMain.scss";
+import investor1 from "../../ux-ux-designs/investor1.png";
+import investor2 from "../../ux-ux-designs/investor2.png";
+import investor3 from "../../ux-ux-designs/investor3.png";
+import investor4 from "../../ux-ux-designs/investor4.png";
+import investor5 from "../../ux-ux-designs/investor5.png";
+import investor6 from "../../ux-ux-designs/investor6.png";
+import investor7 from "../../ux-ux-designs/investor7.png";
+import investor8 from "../../ux-ux-designs/investor8.png";
+import investor9 from "../../ux-ux-designs/investor9.png";
+import investor10 from "../../ux-ux-designs/investor10.png";
+import investor11 from "../../ux-ux-designs/investor11.png";
+import investor12 from "../../ux-ux-designs/investor12.png";
+import investor13 from "../../ux-ux-designs/investor13.png";
+import investor14 from "../../ux-ux-designs/investor14.png";
+import investor15 from "../../ux-ux-designs/investor15.png";
+import investor16 from "../../ux-ux-designs/investor16.png";
+import investor17 from "../../ux-ux-designs/investor17.png";
+import investor18 from "../../ux-ux-designs/investor11.png";
+
 
 const testimonials = [
   {
@@ -32,36 +51,83 @@ const testimonials = [
   },
 ];
 
+const investors = [
+  investor1,
+  investor2,
+  investor3,
+  investor4,
+  investor5,
+  investor6,
+  investor7,
+  investor8,
+  investor9,
+  investor10,
+  investor11,
+  investor12,
+  investor13,
+  investor14,
+  investor15,
+  investor16,
+  investor17,
+  investor18
+];
+
+console.log(investors); // Check if array contains correct paths
+
+
 const TestimonialMain = () => {
   return (
     <div className="testimonials">
-      <section className="hero">
-        <h1>Read what happy investors are saying</h1>
-        <p>Join thousands of investors funding Nigeria’s agricultural growth while earning sustainable returns</p>
-      </section>
+    <div className="happy-investors">
+    <div className="investors-container">
+      {investors.map((investor, index) => {
+        const randomX = Math.random() * 90 + "%"; // Random X position
+        const randomY = Math.random() * 80 + "%"; // Random Y position
+
+        return (
+          <img
+            key={index}
+            src={investor}
+            alt={`Investor ${index + 1}`}
+            className="investor-image"
+            style={{ left: randomX, top: randomY }} // Random positioning
+          />
+        );
+      })}
+    </div>
+    <h2>Read what happy investors are saying</h2>
+    <p>
+      Join thousands of investors funding Nigeria's agricultural growth while earning sustainable returns.
+    </p>
+  </div>
 
       <section className="video-section">
         <div className="video-thumbnail">
           <button className="play-button">▶</button>
         </div>
         <blockquote>
-          "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare."
+          "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend
+          metus ut velit iaculis ornare."
         </blockquote>
       </section>
 
       <section className="testimonials">
         {testimonials.map((testimonial, index) => (
           <div key={index} className={`testimonial-card ${testimonial.color}`}>
+            {/*
             <img src={testimonial.image} alt={testimonial.name} />
             <h3>{testimonial.name}</h3>
             <p className="position">{testimonial.position}</p>
             <p className="text">{testimonial.text}</p>
+            */}
           </div>
         ))}
       </section>
 
       <section className="cta">
-        <button className="investment-button">Begin Your Investment Journey Today →</button>
+        <button className="investment-button">
+          Begin Your Investment Journey Today →
+        </button>
       </section>
     </div>
   );
