@@ -31,40 +31,54 @@
 
 
     .nav-links {
-        display: flex;
-        gap: 1.5rem;
-        list-style: none;
-        text-decoration: none;
-      
-        li {
-          cursor: pointer;
-          padding: 0.5rem 1rem;
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+  
+      li {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        font-family: "DM Sans", sans-serif;
+  
+        .inactive {
+          color: #000000; // Default color for inactive links
           text-decoration: none;
-          color: #000000; // Set default color to black
-          font-family: "DM Sans", sans-serif; // Set font to DM Sans
-      
-          &:hover {
-            color: #6b911b; // Change color to green when hovering
-            text-decoration: underline; // Underline on hover
-          }
+          border: none; // No border for inactive links
+        }
+  
+        .active {
+          color: #6b911b; // Color for active links
+          text-decoration: none; // Underline for active links
+          border-bottom: 2px solid #6b911b; // Border for active links
+        }
+  
+        &:hover .inactive {
+          color: #6b911b; // Change color on hover
+          text-decoration: none; // dont underline for active links
+          border-bottom: 2px solid #6b911b;
         }
       }
+    }
       
   
     .auth-links {
       display: flex;
-      gap: 16px;
+      gap: 1.5rem;
+      font-family: "DM Sans", sans-serif;
   
       .btn-in,
       .btn-up {
         padding: 12px 20px;
         border-radius: 200px;
         cursor: pointer;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 600;
       }
   
       .btn-in {
         border: 1px solid #6b911b;
         background: transparent;
+        color: #6b911b;
   
         &:hover {
           background-color: lightgray;

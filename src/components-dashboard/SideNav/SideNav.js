@@ -1,29 +1,48 @@
 import React from "react";
+import {
+  FaChartPie,
+  FaCog,
+  FaHeadset,
+  FaUniversity,
+  FaWallet,
+} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import { FaChartPie, FaUniversity, FaWallet, FaCog, FaHeadset } from "react-icons/fa";
+import Imagemain from "../../ux-ux-designs/Tina-Edwards.png";
 import "./SideNav.scss";
 
 const SideNav = () => {
   return (
     <nav className="side-nav">
       <h2 className="logo">Cosmos</h2>
-      <ul>
-        <li>
-          <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
-            <FaChartPie /> Overview
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/investments" className={({ isActive }) => (isActive ? "active" : "")}>
-            <FaUniversity /> Investments
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/wallet" className={({ isActive }) => (isActive ? "active" : "")}>
-            <FaWallet /> Wallet
-          </NavLink>
-        </li>
-      </ul>
+      <div className='top-links'>
+        <p>Menu</p>
+        <ul>
+          <li>
+            <NavLink
+              to="/overview"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              <FaChartPie /> Overview
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/investments-container"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              <FaUniversity /> Investments
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/wallet-container"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              <FaWallet /> Wallet
+            </NavLink>
+          </li>
+        </ul>
+      </div>
       <div className="bottom-links">
         <NavLink to="/settings">
           <FaCog /> Settings
@@ -31,6 +50,15 @@ const SideNav = () => {
         <NavLink to="/support">
           <FaHeadset /> Help & Support
         </NavLink>
+        <section className='tina-overview'>
+        <div className="tina-image">
+        <img src={Imagemain} className='tina-image'/>
+        </div>
+        <div className='tina-name-email'>
+        <h4>Tina Edwards</h4>
+        <p>tinaedwards@gmail.com</p>
+      </div>
+        </section>
       </div>
     </nav>
   );

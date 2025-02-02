@@ -18,17 +18,14 @@ const SignIn = () => {
 
     const storedUser = JSON.parse(localStorage.getItem("user"));
 
-    if (
-      !storedUser ||
-      storedUser.email !== formData.email ||
-      storedUser.password !== formData.password
-    ) {
+    if (!storedUser || storedUser.email !== formData.email || storedUser.password !== formData.password) {
       alert("Invalid credentials! Please try again.");
       return;
     }
 
     alert("Login successful!");
-    navigate("/dashboard"); // Redirect to the dashboard or home
+    localStorage.setItem("isAuthenticated", "true"); // Store authentication flag
+    navigate("/dashboard-container"); // Redirect to Dashboard
   };
 
   return (
@@ -65,16 +62,11 @@ const SignIn = () => {
           </button>
         </form>
         <p>
-          Don’t have an account?{" "}
-          <span onClick={() => navigate("/signup")}>Sign Up</span>
+          Don’t have an account? <span onClick={() => navigate("/signup-container")}>Sign Up</span>
         </p>
       </div>
     </div>
   );
 };
 
-
-
-
 export default SignIn;
-

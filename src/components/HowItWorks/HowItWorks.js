@@ -1,7 +1,5 @@
 import React from "react";
 import "./HowItWorks.scss";
-
-// Import images correctly (ensure the paths are correct in your project)
 import backgroundImg from "../../ux-ux-designs/41.png";
 import browseImg from "../../ux-ux-designs/image.png";
 import signupImg from "../../ux-ux-designs/image1.png";

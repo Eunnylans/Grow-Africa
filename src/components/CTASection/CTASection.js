@@ -1,6 +1,6 @@
 import React from "react";
 import "./CTASection.scss";
-import farmingImage from "../../ux-ux-designs/cta-image.png"; // Update with the correct image path
+import farmingImage from "../../ux-ux-designs/cta-image.png"; 
 
 const CTASection = () => {
   return (

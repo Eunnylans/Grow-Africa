@@ -1,4 +1,4 @@
-.wallet-container {
+.investments-container {
     padding: 20px;
     background: #fff;
     border-radius: 10px;
@@ -24,7 +24,6 @@
     padding: 10px;
     background: #f9f9f9;
     border-radius: 8px;
-    align-items: center;
   
     .metric {
       text-align: center;
@@ -39,39 +38,25 @@
         font-weight: bold;
       }
     }
-  
-    .actions {
-      display: flex;
-      gap: 10px;
-  
-      button {
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
-      }
-  
-      .add-funds {
-        background: #6B911B;
-        color: #FFFFFF;
-      }
-  
-      .withdraw {
-        background: FFFFFF;
-        color: #6B911B;
-        border: 1px solid #6B911B;
-      }
-    }
   }
   
-  .transaction-history {
+  .invest-btn {
+    background:#6B911B;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .investment-portfolio {
     background: white;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   
-    .history-header {
+    .portfolio-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -111,15 +96,20 @@
     font-weight: bold;
   }
   
+  .status.active {
+    background: #E2F1FC;
+    color: #02487A;
+  }
+  
   .status.completed {
     background: #ECFDF3;
     color: #027A48;
+
   }
   
   .status.pending {
     background: #FEF9C3;
     color: #713F12;
-
   }
   
   .pagination {

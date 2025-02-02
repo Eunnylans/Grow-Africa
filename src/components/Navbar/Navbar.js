@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom"; // Import Link for navigation
+import { NavLink, useNavigate } from "react-router-dom"; // Import NavLink for navigation
 import "./Navbar.scss";
 
 const Navbar = () => {
-
   const navigate = useNavigate(); // Hook for navigation
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -36,35 +34,61 @@ const Navbar = () => {
       <div className={`menu ${isMenuOpen ? "open" : ""}`}>
         <ul className="nav-links">
           <li onClick={toggleMenu}>
-            <Link to="/">Home</Link>
-          </li>{" "}
-          {/* Link added */}
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+            >
+              Home
+            </NavLink>
+          </li>
           <li onClick={toggleMenu}>
-            <Link to="/about-us">About Us</Link>
-          </li>{" "}
-          {/* Link added */}
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+            >
+              About Us
+            </NavLink>
+          </li>
           <li onClick={toggleMenu}>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>{" "}
-          {/* Link added */}
+            <NavLink
+              to="/portfolio"
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+            >
+              Portfolio
+            </NavLink>
+          </li>
           <li onClick={toggleMenu}>
-            <Link to="/testimonials">Testimonials</Link>
-          </li>{" "}
-          {/* Link added */}
+            <NavLink
+              to="/testimonials"
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+            >
+              Testimonials
+            </NavLink>
+          </li>
           <li onClick={toggleMenu}>
-            <Link to="/contact">Contact</Link>
-          </li>{" "}
-          {/* Link added */}
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+            >
+              Contact
+            </NavLink>
+          </li>
         </ul>
 
         {/* Authentication Links */}
         <div className="auth-links">
-          <button className="btn-in" onClick={() => navigate("/signin-container")}>
+          <button
+            className="btn-in"
+            onClick={() => navigate("/signin-container")}
+          >
             Log in
           </button>
-          <button className="btn-up" onClick={() => navigate("/signup-container")}>
-          Sign Up
-        </button>
+          <button
+            className="btn-up"
+            onClick={() => navigate("/signup-container")}
+          >
+            Sign Up
+          </button>
         </div>
       </div>
     </nav>
