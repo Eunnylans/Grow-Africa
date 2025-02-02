@@ -148,7 +148,7 @@ const TestimonialMain = () => {
         </blockquote>
       </section>
 
-      <section className="testimonials">
+      <section className="testimonials-cover">
         {testimonials.map((testimonial, index) => (
           <div>
           <img src={testimonial.image} alt={testimonial.name} />

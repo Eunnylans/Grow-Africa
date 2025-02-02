@@ -6,14 +6,11 @@
     text-align: center;
     padding: 50px;
     background-color: #fff;
-    //position: relative;
-    height: 100vh; // Full height of the viewport
+    height: 100vh; // Full viewport height
 
     display: flex;
-    justify-content: center; // Centers horizontally
-    align-items: center; // Centers vertically
-    height: 100vh; // Full viewport height
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 
     .investors-container {
       position: absolute;
@@ -23,17 +20,17 @@
       height: 100%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around; // Spreads images evenly
-      align-items: center; // Centers images vertically
+      justify-content: space-around;
+      align-items: center;
       padding: 10px;
       margin-top: 20px;
 
       .investor-image {
-        width: 80px; // Increase image size
+        width: 80px;
         height: 80px;
         border-radius: 50%;
         object-fit: cover;
-        position: absolute; // Allows free positioning
+        position: absolute;
         animation: floatAnimation 10s infinite alternate ease-in-out;
       }
     }
@@ -44,35 +41,29 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      background: rgba(255, 255, 255, 0.8); // Light background
+      background: rgba(255, 255, 255, 0.8);
       padding: 20px;
-      width: 80%; // Makes it responsive
-      max-width: 949px; // Ensures it doesn't exceed this width
-      height: auto; // Adjusts height automatically
+      width: 80%;
+      max-width: 949px;
+      height: auto;
       display: flex;
       flex-direction: column;
-      align-items: center; // Centers content horizontally
-      justify-content: center; // Centers content vertically
+      align-items: center;
+      justify-content: center;
       gap: 16px;
 
       h1 {
-        max-width: 100%;
-        font-family: "DM Sans", sans-serif;
-        font-size: 60px;
+        font-size: clamp(2rem, 5vw, 60px);
         font-weight: 600;
-        line-height: 78px;
-        text-align: center;
-        margin: 0;
+        line-height: 1.2;
       }
 
       p {
-        max-width: 60%; // Adjusts width dynamically
-        font-family: "DM Sans", sans-serif;
-        font-size: 18px;
+        max-width: 60%;
+        font-size: clamp(1rem, 2vw, 18px);
         font-weight: 500;
-        line-height: 28px;
-        text-align: center;
-        margin: 0 auto; // Centers the paragraph
+        line-height: 1.5;
+        margin: 0 auto;
       }
     }
   }
@@ -89,6 +80,7 @@
 
   .video-section {
     padding: 40px 20px;
+    text-align: center;
 
     .video-thumbnail {
       width: 80%;
@@ -103,64 +95,42 @@
       border-radius: 10px;
     }
 
-    .play-button {
-      border: 50%;
-      border: none;
-      font-size: 2rem;
-      cursor: pointer;
-    }
-
     blockquote {
-      width: 80%; // Makes it responsive
-      max-width: 600px; // Ensures it doesn't exceed this width
-      margin: 50px auto 0; // Adds space on top & centers horizontally
-      font-family: "DM Sans", sans-serif;
-      font-size: 18px;
+      width: 80%;
+      max-width: 600px;
+      margin: 50px auto 0;
+      font-size: clamp(1rem, 2vw, 18px);
       font-weight: 500;
-      line-height: 28px;
       text-align: center;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
     }
   }
 
-  .testimonials {
+  .testimonials-cover {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // Creates 3 columns
-    gap: 20px; // Space between cards
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     padding: 40px;
     justify-content: center;
-    overflow: hidden;
 
     .testimonial-card {
       color: white;
       text-align: left;
-      width: 428px; // Ensure fixed width
-      height: 350px;
+      width: 100%;
+      max-width: 428px;
+      height: auto;
       padding: 30px 39px;
       border-radius: 20px;
-      overflow: hidden;
-      h3 {
-        padding-bottom: 30px;
-      }
 
-      .position {
-        padding-bottom: 30px;
-      }
-
+      h3,
+      .position,
       .text {
-        padding-bottom: 30px;
+        padding-bottom: 20px;
       }
 
       .quote {
-        font-family: "DM Sans";
-        font-size: 83.25px;
+        font-size: clamp(2rem, 4vw, 83px);
         font-weight: 500;
-        line-height: 73px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        overflow: hidden;
+        line-height: 1.2;
       }
 
       &.green {
@@ -170,6 +140,7 @@
         background: #ffb300;
       }
     }
+
     .cta {
       padding: 40px;
       .cta-button {
@@ -188,12 +159,121 @@
         max-width: 600px;
         margin: 0 auto;
 
-        font-family: "DM Sans", sans-serif;
-        text-align: center;
-
         &:hover {
           background-color: #5a7f15;
         }
+      }
+    }
+  }
+
+  /* Responsive Design */
+
+  @media (max-width: 1024px) {
+    .testimonials {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 30px;
+
+      .video-section {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-cover {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 20px;
+
+      .video-section {
+        margin-top: 70px;
+
+        .video-thumbnail {
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .testimonials {
+      gap: 15px;
+
+      .happy-investors {
+        padding: 30px;
+        height: auto;
+      }
+
+      .video-section {
+        margin-top: 100px;
+      }
+
+      .testimonial-card {
+        max-width: 90%;
+        padding: 20px;
+      }
+
+      .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .testimonials {
+      padding: 15px;
+
+      .happy-investors {
+        padding: 20px;
+      }
+
+      .investors-info {
+        width: 90%;
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          max-width: 80%;
+          font-size: 1rem;
+        }
+      }
+
+      .video-section {
+        margin-top: 120px;
+      }
+    }
+  }
+
+  @media (max-width: 344px) {
+    .testimonials {
+      padding: 10px;
+
+      .happy-investors {
+        padding: 10px;
+      }
+
+      .investors-info {
+        width: 95%;
+        h1 {
+          font-size: 1.8rem;
+        }
+        p {
+          max-width: 90%;
+          font-size: 0.9rem;
+        }
+      }
+
+      .video-section {
+        margin-top: 140px;
+      }
+
+      .testimonial-card {
+        padding: 15px;
+      }
+
+      .cta-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
       }
     }
   }
