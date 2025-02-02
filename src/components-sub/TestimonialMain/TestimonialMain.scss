@@ -6,9 +6,15 @@
     text-align: center;
     padding: 50px;
     background-color: #fff;
-    position: relative;
+    //position: relative;
     height: 100vh; // Full height of the viewport
-  
+
+    display: flex;
+    justify-content: center; // Centers horizontally
+    align-items: center; // Centers vertically
+    height: 100vh; // Full viewport height
+    text-align: center;
+
     .investors-container {
       position: absolute;
       top: 0;
@@ -19,42 +25,67 @@
       flex-wrap: wrap;
       justify-content: space-around; // Spreads images evenly
       align-items: center; // Centers images vertically
-      padding: 20px;
-  
+      padding: 10px;
+      margin-top: 20px;
+
       .investor-image {
         width: 80px; // Increase image size
         height: 80px;
         border-radius: 50%;
         object-fit: cover;
         position: absolute; // Allows free positioning
-        animation: floatAnimation 5s infinite alternate ease-in-out;
+        animation: floatAnimation 10s infinite alternate ease-in-out;
       }
     }
-  
-    h2, p {
-      position: relative;
-      z-index: 2;
-      background: rgba(255, 255, 255, 0.8); // Light background to make text readable
-      padding: 10px;
-      display:flex;
+
+    .investors-info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8); // Light background
+      padding: 20px;
+      width: 80%; // Makes it responsive
+      max-width: 949px; // Ensures it doesn't exceed this width
+      height: auto; // Adjusts height automatically
+      display: flex;
       flex-direction: column;
-   
+      align-items: center; // Centers content horizontally
+      justify-content: center; // Centers content vertically
+      gap: 16px;
+
+      h1 {
+        max-width: 100%;
+        font-family: "DM Sans", sans-serif;
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 78px;
+        text-align: center;
+        margin: 0;
+      }
+
+      p {
+        max-width: 60%; // Adjusts width dynamically
+        font-family: "DM Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: center;
+        margin: 0 auto; // Centers the paragraph
+      }
     }
   }
-  
+
   // Floating animation for images
   @keyframes floatAnimation {
     from {
       transform: translateY(0);
     }
     to {
-      transform: translateY(-10px);
+      transform: translateY(40px);
     }
   }
-  
-  
-  
-  
 
   .video-section {
     padding: 40px 20px;
@@ -64,7 +95,8 @@
       max-width: 600px;
       margin: 0 auto;
       height: 300px;
-      background: #ddd;
+      background: url("../../ux-ux-designs/port-you.png") no-repeat center
+        center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -72,62 +104,97 @@
     }
 
     .play-button {
-      background: white;
+      border: 50%;
       border: none;
       font-size: 2rem;
       cursor: pointer;
     }
+
+    blockquote {
+      width: 80%; // Makes it responsive
+      max-width: 600px; // Ensures it doesn't exceed this width
+      margin: 50px auto 0; // Adds space on top & centers horizontally
+      font-family: "DM Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
   }
 
   .testimonials {
-    /* display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px;
-  
-      .testimonial-card {
-        width: 300px;
-        padding: 20px;
-        border-radius: 10px;
-        color: white;
-        text-align: left;
-  
-        &.green {
-          background: #4caf50;
-        }
-        &.yellow {
-          background: #ffb300;
-        }
-  
-        img {
-          width: 100%;
-          border-radius: 10px;
-        }
-      } */
-
-    padding: 50px 20px;
-    background: url("../../ux-ux-designs/Testimo1.png") no-repeat center
-      center/cover;
-    width: 100%; // Make the width 100% to fill the container
-    height: 250vh; // Set a fixed height for desktop
-    gap: 0px;
-    opacity: 1; // Ensure the opacity is visible
-    text-align: center;
-    padding: 4rem 0;
-    transition: all 0.3s ease-in-out; // Optional: to make transitions smoother when resizing
-  }
-
-  .cta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Creates 3 columns
+    gap: 20px; // Space between cards
     padding: 40px;
-    .investment-button {
-      background: #4caf50;
+    justify-content: center;
+    overflow: hidden;
+
+    .testimonial-card {
       color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
+      text-align: left;
+      width: 428px; // Ensure fixed width
+      height: 350px;
+      padding: 30px 39px;
+      border-radius: 20px;
+      overflow: hidden;
+      h3 {
+        padding-bottom: 30px;
+      }
+
+      .position {
+        padding-bottom: 30px;
+      }
+
+      .text {
+        padding-bottom: 30px;
+      }
+
+      .quote {
+        font-family: "DM Sans";
+        font-size: 83.25px;
+        font-weight: 500;
+        line-height: 73px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        overflow: hidden;
+      }
+
+      &.green {
+        background: #4caf50;
+      }
+      &.yellow {
+        background: #ffb300;
+      }
+    }
+    .cta {
+      padding: 40px;
+      .cta-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #6b911b;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+
+        font-family: "DM Sans", sans-serif;
+        text-align: center;
+
+        &:hover {
+          background-color: #5a7f15;
+        }
+      }
     }
   }
 }

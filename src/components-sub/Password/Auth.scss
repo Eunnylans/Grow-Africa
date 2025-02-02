@@ -1,0 +1,71 @@
+.mainauth-container {
+  display: flex;
+  height: 100vh;
+  background: #f7f7f7;
+
+  .changepassword-image {
+    width: 50%;
+    background: url("../../ux-ux-designs/SignUp.png") center/cover no-repeat;
+  }
+
+  // Auth.scss
+  .auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+
+  .auth-container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+  }
+
+  .auth-container h2 {
+    margin-bottom: 1rem;
+  }
+
+  .auth-container input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .auth-container button {
+    width: 80%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .auth-container button:hover {
+    background-color: #45a049;
+  }
+
+  .code-input {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .code-input input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,120 @@
+.signup-container {
+  display: flex;
+  height: 100vh;
+  background: #f7f7f7;
+
+  .signup-image {
+    width: 50%;
+    background: url("../../ux-ux-designs/SignUp.png") center/cover no-repeat;
+  }
+
+  .signup-form {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+
+    h2 {
+      color: #6a9a01;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        background: #f1f1f1;
+        padding: 12px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+
+        .icon {
+          margin-right: 10px;
+          color: #6a9a01;
+        }
+
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          background: transparent;
+          font-size: 16px;
+        }
+      }
+
+      .terms {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        input {
+          margin-right: 10px;
+        }
+
+        span {
+          font-size: 14px;
+          color: #555;
+
+          a {
+            color: #6a9a01;
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .signup-btn {
+        background: #b2c248;
+        color: white;
+        font-size: 16px;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #98a63b;
+        }
+      }
+    }
+
+    .login-link {
+      margin-top: 10px;
+      text-align: center;
+
+      a {
+        color: #6a9a01;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+
+    .signup-image {
+      display: none;
+    }
+
+    .signup-form {
+      width: 100%;
+      padding: 30px;
+    }
+  }
+}
