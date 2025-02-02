@@ -1,0 +1,43 @@
+.side-nav {
+    width: 250px;
+    height: 100vh;
+    background: #f5f5f5;
+    padding: 20px;
+  
+    .logo {
+      font-size: 24px;
+      color: green;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        padding: 15px;
+        cursor: pointer;
+  
+        a {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 16px;
+          color: black;
+          transition: color 0.3s ease-in-out;
+  
+          &:hover {
+            color: darkgreen;
+          }
+        }
+      }
+    }
+  
+    .active {
+      color: green;
+      font-weight: bold;
+    }
+  }
+  
