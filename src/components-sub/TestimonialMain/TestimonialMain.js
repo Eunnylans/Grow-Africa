@@ -37,7 +37,7 @@ const testimonials = [
     text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in.",
     image: image1,
     color: "green",
-    quote: "“"
+    quote: "“",
   },
   {
     name: "John Doe",
@@ -45,7 +45,7 @@ const testimonials = [
     text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt.",
     image: image2,
     color: "yellow",
-    quote: '“'
+    quote: "“",
   },
   {
     name: "John Doe",
@@ -53,7 +53,7 @@ const testimonials = [
     text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in..",
     image: image3,
     color: "green",
-    quote: '“'
+    quote: "“",
   },
   {
     name: "John Doe",
@@ -61,7 +61,7 @@ const testimonials = [
     text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare.",
     image: image4,
     color: "yellow",
-    quote: '“'
+    quote: "“",
   },
 
   {
@@ -70,7 +70,7 @@ const testimonials = [
     text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in..",
     image: image5,
     color: "green",
-    quote: '“'
+    quote: "“",
   },
   {
     name: "John Doe",
@@ -78,7 +78,7 @@ const testimonials = [
     text: "PPellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in..",
     image: image6,
     color: "yellow",
-    quote: '“'
+    quote: "“",
   },
 ];
 
@@ -151,25 +151,27 @@ const TestimonialMain = () => {
       <section className="testimonials-cover">
         {testimonials.map((testimonial, index) => (
           <div>
-          <img src={testimonial.image} alt={testimonial.name} />
-          <div key={index} className={`testimonial-card ${testimonial.color}`}>
-            <h3>{testimonial.name}</h3>
-            <p className="position">{testimonial.position}</p>
-            <p className="text">{testimonial.text}</p>
-            <p className="quote">{testimonial.quote}</p>
-          </div>
+            <img src={testimonial.image} alt={testimonial.name} />
+            <div
+              key={index}
+              className={`testimonial-card ${testimonial.color}`}
+            >
+              <h3>{testimonial.name}</h3>
+              <p className="position">{testimonial.position}</p>
+              <p className="text">{testimonial.text}</p>
+              <p className="quote">{testimonial.quote}</p>
+            </div>
           </div>
         ))}
       </section>
 
       <section className="cta">
-      <input 
-      type="button" 
-      value="Begin Your Investment Journey Today →" 
-      className="cta-button" 
-      onClick={() => window.location.href = '/contact'} 
-    />
-    
+        <input
+          type="button"
+          value="Begin Your Investment Journey Today →"
+          className="cta-button"
+          onClick={() => (window.location.href = "/contact")}
+        />
       </section>
     </div>
   );

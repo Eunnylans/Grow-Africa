@@ -112,7 +112,7 @@
     padding: 40px;
     justify-content: center;
 
-    img{
+    img {
       width: 100%;
       height: 350px;
     }
@@ -153,29 +153,50 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    width: 35%;
+    width: 100%;
+    max-width: 500px; /* Ensures it doesn’t get too big */
     height: 48px;
-    overflow: hidden;
     border: 1px solid #6b911b;
     border-radius: 200px;
-    &:hover {
-      color: #ffffff;
-      background: #6b911b;
+    background: white;
+    margin: 50px auto; /* Centers the section horizontally */
+    text-align: center; /* Ensures inline elements inside are centered */
+    overflow: hidden;
+  }
+
+  .cta-button {
+    color: #6b911b;
+    background: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .cta:hover {
+    background: #6b911b;
+  }
+
+  .cta-button:hover {
+    color: white;
+    background: #6b911b;
+  }
+
+  /* Ensure full responsiveness */
+  @media (max-width: 768px) {
+    .cta {
+      width: 90%;
+      max-width: 100%;
     }
 
-    input {
-      color: #6b911b;
-      background: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 1rem 0.5rem;
-      text-decoration: none;
-      transition: background 0.3s ease;
-      width: 100%;
-
-      margin: 0 auto;
-      border: none;
-      cursor: pointer;
+    .cta-button {
+      font-size: 0.7rem;
+      padding: 0.8rem 1.5rem;
     }
   }
 
