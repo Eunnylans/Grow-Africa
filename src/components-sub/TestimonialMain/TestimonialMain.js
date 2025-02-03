@@ -163,7 +163,13 @@ const TestimonialMain = () => {
       </section>
 
       <section className="cta">
-        <a href="/contact" className="cta-button"> Begin Your Investment Journey Today →</a>
+      <input 
+      type="button" 
+      value="Begin Your Investment Journey Today →" 
+      className="cta-button" 
+      onClick={() => window.location.href = '/contact'} 
+    />
+    
       </section>
     </div>
   );
