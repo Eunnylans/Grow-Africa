@@ -9,6 +9,7 @@ import PortfolioPage from "./mainComponent/PortfolioPage/PortfolioPage.js";
 import TestimonialPage from "./mainComponent/TestimonialPage/TestimonialPage.js";
 import AuthFlow from "./components-sub/Password/AuthFlow.js";
 import Dashboard from "./components-dashboard/Dashboard/Dashboard.js"; // Import Dashboard
+//import ScrollToTopIcon from './components/ScrollToTopIcon/ScrollToTopIcon.js';
 
 import "./styles.scss";
 
@@ -31,6 +32,7 @@ const App = () => {
         {/* Protected Dashboard Route */}
         <Route path="/dashboard-container" element={isAuthenticated ? <Dashboard /> : <Navigate to="/signin-container" />} />
       </Routes>
+     {/* <ScrollToTopIcon />*/}
     </Router>
   );
 };

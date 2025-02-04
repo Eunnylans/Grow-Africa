@@ -2,6 +2,7 @@
   text-align: center;
   font-family: Arial, sans-serif;
   height: 300%;
+  overflow: hidden;
 
   .hero-section {
     background: url("../../ux-ux-designs/Aboutus-hero.png") no-repeat center
@@ -14,186 +15,265 @@
     font-size: 2rem;
   }
 
+  /* ABOUT SECTION */
+.content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 3rem 5rem;
+
   .about-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 5rem;
     gap: 2rem;
     width: 100%;
-    height: 100vh;
-    color: #ffffff;
+    height: auto;
     overflow: hidden;
-  
-    .about-content-up {
-      flex: 1;
-      max-width: 50%;
-  
-      .section-title {
-        font-family: "DM Sans", sans-serif;
-        font-size: 36px;
-        font-weight: 600;
-        color: #6b911b;
-        margin-bottom: 1rem;
-        text-align: start;
-      }
-  
-      .subtitle {
-        font-size: 20px;
-        font-weight: 500;
-        color: #1a1a1a;
-        margin-bottom: 1rem;
-        text-align: start;
-      }
-  
-      .story-text {
-        font-family: "DM Sans", sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #9b9d8e;
-        max-width: 576px;
-        text-align: justify;
-      }
-    }
-  
-    .about-image {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      
-  
-      .img-container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-  
-        .img-main {
-          width: 400px;
-          height: auto;
-          border-radius: 10px;
-          position: relative;
-          z-index: 2;
-        }
-  
-        .img-small {
-          width: 150px;
-          height: auto;
-          border-radius: 10px;
-          position: absolute;
-          bottom: -20px;
-          right: -30px;
-          z-index: 1;
-          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-        }
-      }
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      text-align: center;
     }
   }
-  
 
+  .about-content-up {
+    flex: 1;
+    max-width: 100%;
 
-  .about-section {
-    background-color: #f7f8ed;
-    padding: 4rem 6rem;
+    .section-title {
+      font-family: "DM Sans", sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #6b911b;
+      margin-bottom: 1rem;
+      text-align: start;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+      text-align: start;
+    }
+
+    .story-text {
+      font-family: "DM Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #9b9d8e;
+      max-width: 576px;
+      text-align: justify;
+    }
+  }
+
+  .about-image {
+    flex: 1;
     display: flex;
+    align-items: center;
     justify-content: center;
-  
-    .about-content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .img-container {
+      position: relative;
       display: flex;
       align-items: center;
-      gap: 3rem;
-      max-width: 1200px;
-  
-      .about-images {
+      overflow: hidden;
+
+      .img-main {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
         position: relative;
-        width: 450px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-  
-        .background-shape {
-          width: 100px;
-          height: 100px;
-          background-color: #6b911b;
-          position: absolute;
-          bottom: -20px;
-          left: -20px;
-          border-radius: 10px;
-        }
-  
-        .main-image {
-          width: 100%;
-          height: auto;
-          border-radius: 15px;
-          position: relative;
-          z-index: 2;
-        }
-  
-        .overlay-image {
-          width: 180px;
-          height: auto;
-          border-radius: 10px;
-          position: absolute;
-          bottom: -30px;
-          left: -40px;
-          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-          z-index: 3;
-        }
+        z-index: 2;
       }
-  
-      .about-text {
-        max-width: 600px;
-  
-        .title {
-          font-size: 32px;
-          font-weight: 700;
-          color: #6b911b;
-          margin-bottom: 1rem;
-          text-align: start;
-        }
-  
-        .subtitle {
-          font-size: 20px;
-          font-weight: 600;
-          color: #1a1a1a;
-          margin-top: 1.5rem;
-          text-align: start;
-        }
-  
-        .description {
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 1.6;
-          color: #4a4a4a;
-          margin-top: 0.5rem;
-          text-align: start;
-        }
+
+      .img-small {
+        width: 150px;
+        height: auto;
+        border-radius: 20px 20px 20px 20px;
+        position: absolute;
+        bottom: -20px;
+        right: -30px;
+        z-index: 1;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
       }
     }
   }
-  
+}
+
+/* AGRITECH SECTION */
+.about-section {
+  background-color: #f7f8ed;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 3rem 5rem;
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: nowrap;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .about-images {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    min-width: 350px;
+    overflow: hidden;
+
+    .background-shape {
+      width: 100px;
+      height: 100px;
+      background-color: #6b911b;
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      border-radius: 10px;
+    }
+
+    .main-image {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .overlay-image {
+      width: 180px;
+      height: auto;
+      border-radius: 20px;
+      position: absolute;
+      bottom: -30px;
+      left: -40px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 3;
+    }
+  }
+
+  .about-text {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #6b911b;
+      margin-bottom: 1rem;
+      text-align: start;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-top: 1.5rem;
+      text-align: start;
+    }
+
+    .description {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #4a4a4a;
+      margin-top: 0.5rem;
+      text-align: start;
+    }
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .about-section, .content {
+    padding: 3rem 2rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .about-text, .about-content-up {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section, .content {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .description, .story-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section, .content {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .description, .story-text {
+    font-size: 14px;
+  }
+}
+
+
+ /*  MISSION SECTION*/
+
   .mission {
     text-align: center;
     padding: 50px 20px;
-  
+
     .mission-title {
       font-size: 28px;
       font-weight: bold;
       color: #6b911b;
       margin-bottom: 30px;
     }
-  
+
     .mission-cards {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
     }
-  
+
     .mission-card {
       background: #fff;
       border-radius: 10px;
@@ -205,12 +285,12 @@
       align-items: center;
       padding: 15px;
       transition: transform 0.3s ease-in-out;
-  
+
       &:hover {
         transform: translateY(-5px);
       }
     }
-  
+
     .mission-image {
       width: 100px;
       height: 100px;
@@ -218,71 +298,70 @@
       object-fit: cover;
       margin-right: 15px;
     }
-  
+
     .mission-content {
       text-align: left;
     }
-  
+
     .mission-heading {
       font-size: 18px;
       font-weight: bold;
       color: #000;
       margin-bottom: 5px;
     }
-  
+
     .mission-description {
       font-size: 14px;
       color: #555;
     }
-  
+
     @media (max-width: 768px) {
       .mission-cards {
         flex-direction: column;
         align-items: center;
       }
-  
+
       .mission-card {
         width: 100%;
         max-width: 400px;
       }
     }
   }
-  
 
   .impact {
     text-align: center;
     padding: 50px 20px;
-  
+
     .impact-title {
       font-size: 28px;
       font-weight: bold;
       color: #6b911b;
       margin-bottom: 30px;
     }
-  
+
     .impact-grid {
       display: flex;
       justify-content: center;
       gap: 50px;
       flex-wrap: wrap;
     }
-  
+
     .impact-item {
       text-align: center;
     }
-  
+
     .impact-number {
       font-size: 40px;
       font-weight: bold;
       color: #222;
     }
-  
+
     .impact-label {
       font-size: 16px;
       color: #777;
       margin-top: 5px;
     }
-  
+
     @media (max-width: 768px) {
       .impact-grid {
         flex-direction: column;
@@ -290,5 +369,4 @@
       }
     }
   }
-  
 }

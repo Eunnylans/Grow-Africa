@@ -1,0 +1,53 @@
+.to-top-icon {
+  z-index: 300;
+  animation: fadeout 1s linear 0s forwards;
+
+  .to-top-icon:hover {
+    cursor: pointer;
+    fill: gray; /* Replace $gray with the actual color value */
+  }
+
+  .to-top-icon.showIcon {
+    animation: fadein 1s linear 0s forwards;
+  }
+
+  @keyframes fadein {
+    from {
+      transform: translateY(50%);
+      opacity: 0.1;
+      visibility: hidden;
+    }
+
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+      visibility: visible;
+      padding: 3px;
+      border: 2px solid gray; /* Replace $gray with the actual color value */
+      border-radius: 50%;
+      position: fixed;
+      bottom: 50px;
+      right: 0.01%;
+    }
+  }
+
+  @keyframes fadeout {
+    from {
+      transform: translateY(0%);
+      opacity: 1;
+      visibility: visible;
+      padding: 3px;
+      border: 2px solid gray; /* Replace $gray with the actual color value */
+      border-radius: 50%;
+      position: fixed;
+      bottom: 50px;
+      right: 0.01%;
+    }
+
+    to {
+      transform: translateY(50%);
+      opacity: 0.1;
+      visibility: hidden;
+    }
+  }
+}
