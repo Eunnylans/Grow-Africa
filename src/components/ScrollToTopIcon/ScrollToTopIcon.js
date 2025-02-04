@@ -1,34 +1,36 @@
-import { animateScroll as scroll } from 'react-scroll';
-import { AiOutlineToTop } from 'react-icons/ai';
-import { useState, useLayoutEffect } from 'react';
-import "./ScrollToTopIcon.scss";
+import React, { useState, useEffect } from "react";
+import { FaArrowUp } from "react-icons/fa"; // Import an up arrow icon
+import "./ScrollToTopIcon.scss"; // Import styles
 
 const ScrollToTopIcon = () => {
-  const [showIcon, setShowIcon] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const onScroll = () => {
-    if (80 < window.scrollY) {
-      setShowIcon(true);
-    } else {
-      setShowIcon(false);
-    }
-  };
+  // Toggle visibility based on scroll position
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
 
-  useLayoutEffect(() => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
+  // Scroll to the top function
   const scrollToTop = () => {
-    scroll.scrollToTop({ duration: 700 });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <AiOutlineToTop
-      className={`to-top-icon ${showIcon ? 'showIcon' : ''}`}
-      size='50px'
+    <button
+      className={`scroll-to-top ${isVisible ? "show" : ""}`}
       onClick={scrollToTop}
-    />
+    >
+      <FaArrowUp />
+    </button>
   );
 };
 
