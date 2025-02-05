@@ -16,6 +16,8 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* Super high value to always be on top */
+    overflow: hidden; /* Prevent any accidental overflow issues */
     
     &:hover {
       background-color: #7f9f39;

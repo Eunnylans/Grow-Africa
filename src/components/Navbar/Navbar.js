@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { NavLink, useNavigate } from "react-router-dom"; // Import NavLink for navigation
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.scss";
 
 const Navbar = () => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev); // ✅ Correctly toggling state
+    setIsMenuOpen((prev) => !prev);
+    console.log("Menu toggled:", !isMenuOpen); // Debugging to ensure toggle works
+  };
+
+  // Close menu when a link is clicked (for mobile)
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
-    console.log("Menu state updated:", isMenuOpen); // ✅ Logs the correct state
+    console.log("Menu state updated:", isMenuOpen); // Ensure state updates
   }, [isMenuOpen]);
 
   return (
@@ -25,53 +31,27 @@ const Navbar = () => {
       </div>
 
       {/* Overlay to close menu when clicked */}
-      <div
-        className={`menu-overlay ${isMenuOpen ? "open" : ""}`}
-        onClick={toggleMenu}
-      ></div>
+      {isMenuOpen && (
+        <div className="menu-overlay open" onClick={toggleMenu}></div>
+      )}
 
       {/* Navigation Menu */}
       <div className={`menu ${isMenuOpen ? "open" : ""}`}>
         <ul className="nav-links">
-          <li onClick={toggleMenu}>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-            >
-              Home
-            </NavLink>
+          <li onClick={closeMenu}>
+            <NavLink to="/">Home</NavLink>
           </li>
-          <li onClick={toggleMenu}>
-            <NavLink
-              to="/about-us"
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-            >
-              About Us
-            </NavLink>
+          <li onClick={closeMenu}>
+            <NavLink to="/about-us">About Us</NavLink>
           </li>
-          <li onClick={toggleMenu}>
-            <NavLink
-              to="/portfolio"
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-            >
-              Portfolio
-            </NavLink>
+          <li onClick={closeMenu}>
+            <NavLink to="/portfolio">Portfolio</NavLink>
           </li>
-          <li onClick={toggleMenu}>
-            <NavLink
-              to="/testimonials"
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-            >
-              Testimonials
-            </NavLink>
+          <li onClick={closeMenu}>
+            <NavLink to="/testimonials">Testimonials</NavLink>
           </li>
-          <li onClick={toggleMenu}>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-            >
-              Contact
-            </NavLink>
+          <li onClick={closeMenu}>
+            <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>
 
@@ -79,13 +59,19 @@ const Navbar = () => {
         <div className="auth-links">
           <button
             className="btn-in"
-            onClick={() => navigate("/signin-container")}
+            onClick={() => {
+              closeMenu();
+              navigate("/signin-container");
+            }}
           >
             Log in
           </button>
           <button
             className="btn-up"
-            onClick={() => navigate("/signup-container")}
+            onClick={() => {
+              closeMenu();
+              navigate("/signup-container");
+            }}
           >
             Sign Up
           </button>

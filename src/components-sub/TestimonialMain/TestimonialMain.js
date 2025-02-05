@@ -32,6 +32,7 @@ import "./TestimonialMain.scss";
 
 const testimonials = [
   {
+    id: 1,
     name: "John Doe",
     position: "CEO Company Name - Investor",
     text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in.",
@@ -40,6 +41,7 @@ const testimonials = [
     quote: "“",
   },
   {
+    id: 2,
     name: "John Doe",
     position: "CEO Company Name - Investor",
     text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt.",
@@ -48,6 +50,7 @@ const testimonials = [
     quote: "“",
   },
   {
+    id: 3,
     name: "John Doe",
     position: "CEO Company Name - Investor",
     text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in..",
@@ -56,6 +59,7 @@ const testimonials = [
     quote: "“",
   },
   {
+    id: 4,
     name: "John Doe",
     position: "CEO Company Name - Investor",
     text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare.",
@@ -65,6 +69,7 @@ const testimonials = [
   },
 
   {
+    id: 5,
     name: "John Doe",
     position: "CEO Company Name - Investor",
     text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in..",
@@ -73,6 +78,7 @@ const testimonials = [
     quote: "“",
   },
   {
+    id: 6,
     name: "John Doe",
     position: "CEO Company Name - Investor",
     text: "PPellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in..",
@@ -150,12 +156,9 @@ const TestimonialMain = () => {
 
       <section className="testimonials-cover">
         {testimonials.map((testimonial, index) => (
-          <div>
+          <div key={index}> {/* Add key prop here */}
             <img src={testimonial.image} alt={testimonial.name} />
-            <div
-              key={index}
-              className={`testimonial-card ${testimonial.color}`}
-            >
+            <div className={`testimonial-card ${testimonial.color}`}>
               <h3>{testimonial.name}</h3>
               <p className="position">{testimonial.position}</p>
               <p className="text">{testimonial.text}</p>
