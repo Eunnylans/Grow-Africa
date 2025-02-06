@@ -30,11 +30,19 @@ const App = () => {
         <Route path="/auth-wrapper" element={<AuthFlow />} />
 
         {/* Protected Dashboard Route */}
-        <Route path="/dashboard-container" element={isAuthenticated ? <Dashboard /> : <Navigate to="/signin-container" />} />
+        <Route 
+          path="/dashboard-container" 
+          element={isAuthenticated ? <Dashboard /> : <Navigate to="/signin-container" replace />} 
+        />
+
+        {/* Optional: Redirect to home if no route matches */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-     <ScrollToTopIcon />
+      <ScrollToTopIcon />
     </Router>
   );
 };
 
 export default App;
+
+

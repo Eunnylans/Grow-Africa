@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.scss";
@@ -9,16 +9,21 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
-    console.log("Menu toggled:", !isMenuOpen); // Debugging to ensure toggle works
+    console.log("Menu Open:", !isMenuOpen);
   };
 
-  // Close menu when a link is clicked (for mobile)
   const closeMenu = () => {
     setIsMenuOpen(false);
+    console.log("Menu Closed");
   };
 
+  // Prevent background scrolling when menu is open
   useEffect(() => {
-    console.log("Menu state updated:", isMenuOpen); // Ensure state updates
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   }, [isMenuOpen]);
 
   return (
@@ -32,26 +37,29 @@ const Navbar = () => {
 
       {/* Overlay to close menu when clicked */}
       {isMenuOpen && (
-        <div className="menu-overlay open" onClick={toggleMenu}></div>
+        <div
+          className="menu-overlay open"
+          onClick={closeMenu}
+        ></div>
       )}
 
       {/* Navigation Menu */}
       <div className={`menu ${isMenuOpen ? "open" : ""}`}>
         <ul className="nav-links">
-          <li onClick={closeMenu}>
-            <NavLink to="/">Home</NavLink>
+          <li>
+            <NavLink to="/" onClick={closeMenu}>Home</NavLink>
           </li>
-          <li onClick={closeMenu}>
-            <NavLink to="/about-us">About Us</NavLink>
+          <li>
+            <NavLink to="/about-us" onClick={closeMenu}>About Us</NavLink>
           </li>
-          <li onClick={closeMenu}>
-            <NavLink to="/portfolio">Portfolio</NavLink>
+          <li>
+            <NavLink to="/portfolio" onClick={closeMenu}>Portfolio</NavLink>
           </li>
-          <li onClick={closeMenu}>
-            <NavLink to="/testimonials">Testimonials</NavLink>
+          <li>
+            <NavLink to="/testimonials" onClick={closeMenu}>Testimonials</NavLink>
           </li>
-          <li onClick={closeMenu}>
-            <NavLink to="/contact">Contact</NavLink>
+          <li>
+            <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
           </li>
         </ul>
 

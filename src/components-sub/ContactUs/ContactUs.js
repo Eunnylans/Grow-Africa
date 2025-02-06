@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import "./ContactUs.scss";
-import Navbar from '../../components/Navbar/Navbar';
+
 
 const ContactUs = () => {
   const mapRef = useRef(null);
