@@ -1,7 +1,8 @@
 .footer {
   background: linear-gradient(to bottom, #5c7c1e, #4e6a19);
   color: white;
-  padding: 2rem 5rem;
+  //padding: 2rem 5rem;
+  padding: 2rem 2.5rem;
   font-family: "DM Sans", sans-serif;
 
   .footer-container {
@@ -56,7 +57,7 @@
 
     .footer-links {
       display: flex;
-      gap: 3rem;
+      gap: 1.5rem;
 
       .footer-column {
         h4 {
