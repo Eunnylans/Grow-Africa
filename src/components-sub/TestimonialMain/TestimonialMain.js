@@ -1,7 +1,7 @@
 import React from "react";
 import investor1 from "../../ux-ux-designs/investor1.png";
 import investor10 from "../../ux-ux-designs/investor10.png";
-/*import {
+import {
   default as investor11,
   default as investor18,
 } from "../../ux-ux-designs/investor11.png";
@@ -18,7 +18,7 @@ import investor5 from "../../ux-ux-designs/investor5.png";
 import investor6 from "../../ux-ux-designs/investor6.png";
 import investor7 from "../../ux-ux-designs/investor7.png";
 import investor8 from "../../ux-ux-designs/investor8.png";
-import investor9 from "../../ux-ux-designs/investor9.png";*/
+import investor9 from "../../ux-ux-designs/investor9.png";
 import playButton from "../../ux-ux-designs/Vector-play.png";
 
 import image1 from "../../ux-ux-designs/rect1.png";
@@ -87,7 +87,7 @@ const testimonials = [
     quote: "“",
   },
 ];
- {/*
+ 
 const investors = [
   investor1,
   investor2,
@@ -108,7 +108,7 @@ const investors = [
   investor17,
   investor18,
 ];
-*/}
+
 
 const renderImage = (src) => {
   if (typeof src === 'string' && src.startsWith('data:')) {
@@ -125,7 +125,7 @@ const TestimonialMain = () => {
     <div className="testimonials">
       <div className="happy-investors">
         <div className="investors-container">
-           {/*{investors.map((investor, index) => {
+           {investors.map((investor, index) => {
             const randomX = Math.random() * 90 + "%"; // Random X position
             const randomY = Math.random() * 80 + "%"; // Random Y position
 
@@ -138,7 +138,7 @@ const TestimonialMain = () => {
                 style={{ left: randomX, top: randomY }} // Random positioning
               />
             );
-          })}*/}
+          })}
         </div>
         <div className="investors-info">
           <h1>Read what happy investors are saying</h1>
