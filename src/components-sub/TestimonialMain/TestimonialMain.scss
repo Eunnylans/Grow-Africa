@@ -1,6 +1,8 @@
+@import "../../variables";
+
 .testimonials {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: $font-family;
   border-top: #eeeaea;
 
   .happy-investors {

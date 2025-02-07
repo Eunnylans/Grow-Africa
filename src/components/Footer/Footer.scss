@@ -1,9 +1,10 @@
+@import "../../variables";
+
 .footer {
   background: linear-gradient(to bottom, #5c7c1e, #4e6a19);
   color: white;
-  //padding: 2rem 5rem;
-  padding: 2rem 2.5rem;
-  font-family: "DM Sans", sans-serif;
+  padding: 2rem 5rem;
+  font-family: $font-family;
 
   .footer-container {
     display: flex;
@@ -142,15 +143,18 @@
 //media screen
 
 @media screen and (max-width: 480px) {
-  .footer-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  .footer {
+    padding: 2rem 2.5rem;
+    .footer-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
 
-    .footer-left,
-    .footer-links {
-      width: 100%;
+      .footer-left,
+      .footer-links {
+        width: 100%;
+      }
     }
   }
 }

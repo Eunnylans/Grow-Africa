@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .testimonials {
   text-align: center;
   padding: 4rem 2rem;
@@ -7,6 +9,7 @@
   margin-top: 7%;
   height: auto;
   border-top: 1px solid #00000026;
+  font-family: $font-family;
 
   .testimonials-header {
     background: url(../../ux-ux-designs/testimonial-header.png) no-repeat center/cover;

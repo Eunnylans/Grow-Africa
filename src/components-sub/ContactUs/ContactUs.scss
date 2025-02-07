@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .contact {
   // padding: 50px;
   background: #f5f5f5;
@@ -5,6 +7,7 @@
   width: 100%;
   max-width: 1440px;
   height: auto;
+  font-family: $font-family;
 
   .contact-header {
     background: url("../../ux-ux-designs/Aboutus-hero.png") no-repeat center
@@ -15,6 +18,11 @@
     justify-content: center;
     color: white;
     font-size: 2rem;
+
+    h1{
+      font-size: 1.5rem;
+      padding-top: 100px;
+    }
   }
 
   .contact-container {

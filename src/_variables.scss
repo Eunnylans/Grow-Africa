@@ -1,0 +1,43 @@
+// Colors
+$primary-color: #6b911b;
+$primary-color1: #cee39d;
+$secondary-color: #000000;
+$border-color: #ddd;
+$border-color1: solid 2px #6b911b;
+$background-color: white;
+$background-color1: rgb(255, 255, 255);
+$hover-bg-color: lightgray;
+$overlay-bg-color: rgba(0, 0, 0, 0.5);
+$box-shadow-color: rgba(107, 103, 103, 0.1);
+
+// Fonts
+$font-family: "DM Sans", sans-serif;
+$logo-font-size: 48px;
+$logo-font-size-mobile: 28px;
+$font-weight-regular: 500;
+$font-weight-bold: 600;
+
+// Button & Link Styles
+$button-border-radius: 200px;
+$button-padding: 12px 20px;
+$menu-gap: 2rem;
+$link-gap: 1.5rem;
+$mobile-link-gap: 1rem;
+
+// Sizes & Layout
+$navbar-height: 96px;
+$navbar-padding: 1rem 5rem;
+$navbar-padding-mobile: 1rem 1.5rem;
+$hamburger-icon-size: 30px;
+$menu-width-mobile: 70%;
+$menu-transition-speed: 0.3s;
+
+// Z-Index
+$z-index-navbar: 1000;
+$z-index-menu: 1100;
+$z-index-hamburger: 1100;
+$z-index-overlay: 1100;
+
+// Media Queries
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;

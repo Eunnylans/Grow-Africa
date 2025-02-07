@@ -1,4 +1,5 @@
 @import "~font-awesome/css/font-awesome.min.css";
+@import "../../variables";
 
 .features {
   width: 100%;
@@ -9,6 +10,7 @@
   padding: 5rem;
   background: #ffffff;
   overflow: hidden;
+  font-family: $font-family;
 
   .feature-left {
     flex: 1;

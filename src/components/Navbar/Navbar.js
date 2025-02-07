@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">Cosmos</div>
+      <div className="logo"><img src={`${process.env.PUBLIC_URL}/GROW Logo.svg`} alt="Logo" /></div>
 
       {/* Hamburger Icon */}
       <div className="hamburger-icon" onClick={toggleMenu}>

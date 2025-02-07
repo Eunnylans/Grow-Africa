@@ -1,7 +1,10 @@
+@import "../../variables";
+
 .signup-container {
   display: flex;
   height: 100vh;
   background: #f7f7f7;
+  font-family: $font-family;
 
   .signup-image {
     width: 50%;

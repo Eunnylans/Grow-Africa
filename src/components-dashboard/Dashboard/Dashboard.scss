@@ -1,8 +1,10 @@
+@import "../../variables";
+
 .dashboard-container {
     display: flex;
     height: 100vh;
     background-color: #f8f8f8;
-    font-family: "Arial", sans-serif;
+    font-family: $font-family;
   }
   
   .sidebar {

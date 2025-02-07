@@ -1,6 +1,8 @@
+@import "../../variables";
+
 .about-us {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: $font-family;
   height: 300%;
   overflow: hidden;
 
@@ -13,6 +15,11 @@
     justify-content: center;
     color: white;
     font-size: 2rem;
+
+    h1{
+      font-size: 1.5rem;
+      padding-top: 100px;
+    }
   }
 
   /* ABOUT SECTION */
