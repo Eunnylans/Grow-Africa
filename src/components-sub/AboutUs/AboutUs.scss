@@ -17,7 +17,6 @@
     font-size: 2rem;
 
     h1{
-      font-size: 1.5rem;
       padding-top: 100px;
     }
   }
@@ -209,6 +208,11 @@
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
+
+  
+  h1{
+    font-size: 3rem;
+  }
   .about-section, .content {
     padding: 3rem 2rem;
   }
@@ -225,6 +229,11 @@
 }
 
 @media (max-width: 768px) {
+  
+  h1{
+    font-size: 2.5rem;
+  }
+
   .about-section, .content {
     padding: 2rem;
   }
@@ -243,6 +252,12 @@
 }
 
 @media (max-width: 480px) {
+
+  
+  h1{
+    font-size: 2rem;
+  }
+
   .about-section, .content {
     padding: 1.5rem;
   }
