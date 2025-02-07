@@ -15,9 +15,10 @@
     justify-content: center;
     color: white;
     font-size: 2rem;
+    overflow: hidden;
 
     h1 {
-      font-size: 1.5rem;
+      overflow: hidden;
       padding-top: 100px;
     }
   }
@@ -294,6 +295,10 @@
 //media screens
 
 @media screen and (max-width: 1024px) {
+    h1{
+      font-size: 3rem;
+    }
+ 
   .investment-strategy {
     padding: 2rem 1rem;
 
@@ -330,6 +335,11 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    h1{
+      font-size: 2.5rem;
+    }
+
   .investment-strategy {
     flex-direction: column;
     padding: 1.5rem 1rem;
@@ -364,6 +374,11 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    h1{
+      font-size: 2rem;
+    }
+
   .investment-strategy {
     padding: 1rem 5px;
 
