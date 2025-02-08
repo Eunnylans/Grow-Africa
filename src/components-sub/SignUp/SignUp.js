@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { FaEnvelope, FaIdCard, FaLock, FaUser } from "react-icons/fa";
+import {
+  FaArrowLeft,
+  FaEnvelope,
+  FaIdCard,
+  FaLock,
+  FaUser,
+} from "react-icons/fa";
+import Navbar from "../../components/Navbar/Navbar";
 import "./SignUp.scss";
 
 const SignUp = () => {
@@ -47,6 +54,7 @@ const SignUp = () => {
 
   return (
     <div className="signup-container">
+      <Navbar />
       <div className="signup-image">
         <img src="" alt="" />
       </div>
@@ -128,9 +136,19 @@ const SignUp = () => {
             Sign up
           </button>
         </form>
-        <p className="login-link">
-          Already have an account? <a href="/signin-container">Login</a>
-        </p>
+        <div className="login-link">
+          <p>
+            {" "}
+            Already have an account? <a href="/signin-container">Login</a>{" "}
+          </p>
+          <a href="/">
+            {" "}
+            <FaArrowLeft
+              size={20}
+              color="#6b8e23"
+            />
+          </a>
+        </div>
       </div>
     </div>
   );

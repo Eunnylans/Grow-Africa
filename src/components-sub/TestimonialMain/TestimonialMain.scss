@@ -4,7 +4,7 @@
   text-align: center;
   font-family: $font-family;
   border-top: #eeeaea;
-
+   
   .happy-investors {
     text-align: center;
     padding: 50px;
@@ -53,11 +53,13 @@
       align-items: center;
       justify-content: center;
       gap: 16px;
+      overflow: hidden;
 
       h1 {
         font-size: clamp(2rem, 5vw, 60px);
         font-weight: 600;
         line-height: 1.2;
+        overflow: hidden;
       }
 
       p {

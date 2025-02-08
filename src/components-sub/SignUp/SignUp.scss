@@ -2,13 +2,15 @@
 
 .signup-container {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   background: #f7f7f7;
   font-family: $font-family;
+  border-top: #eeeaea;
 
   .signup-image {
     width: 50%;
-    background: url("../../ux-ux-designs/SignUp.png") center/cover no-repeat;
+    background: url("../../ux-ux-designs/18.jpg") center/cover no-repeat;
   }
 
   .signup-form {
@@ -33,6 +35,7 @@
     form {
       display: flex;
       flex-direction: column;
+      overflow: hidden;
 
       .form-group {
         display: flex;
@@ -60,6 +63,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 20px;
+        overflow: hidden;
 
         input {
           margin-right: 10px;
@@ -78,9 +82,10 @@
       }
 
       .signup-btn {
-        background: #b2c248;
+        background: #6b8e23;
         color: white;
         font-size: 16px;
+        font-weight: bold;
         padding: 12px;
         border: none;
         border-radius: 5px;
@@ -96,11 +101,14 @@
     .login-link {
       margin-top: 10px;
       text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
 
       a {
         color: #6a9a01;
-        font-weight: bold;
-        text-decoration: none;
       }
     }
   }

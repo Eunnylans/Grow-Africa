@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Image1 from "../../ux-ux-designs/About1.png";
-import Image3 from "../../ux-ux-designs/About3.png";
-import Image2 from "../../ux-ux-designs/About4.png";
+import Image1 from "../../ux-ux-designs/21.jpg";
+import Image3 from "../../ux-ux-designs/17.jpg";
+import Image2 from "../../ux-ux-designs/19.jpg";
+import Image4 from "../../ux-ux-designs/20.jpg";
 import "./AboutUs.scss"; // Import your SCSS file for styling
 
 import mission1 from "../../ux-ux-designs/mission1.png";
@@ -99,12 +100,12 @@ const AboutUs = () => {
           <div className="about-image">
             <div className="img-container">
               <img
-                src={Image2}
+                src={Image3}
                 alt="Farmer in greenhouse"
                 className="img-main"
               />
               <img
-                src={Image1}
+                src={Image4}
                 alt="Farmer carrying produce"
                 className="img-small"
               />
@@ -119,8 +120,8 @@ const AboutUs = () => {
         <div className="about-content">
           <div className="about-images">
             <div className="background-shape"></div> {/* Keep this separate */}
-            <img src={Image3} alt="Farmer smiling" className="main-image" />
-            {/*<img src={Image1} alt="Farmer in field" className="overlay-image" />*/}
+            <img src={Image2} alt="Farmer smiling" className="main-image" />
+            <img src={Image1} alt="Farmer in field" className="overlay-image" />
           </div>
 
           <div className="about-text">

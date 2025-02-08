@@ -89,6 +89,7 @@
           &.active {
             color: $primary-color1;
             font-weight: bold;
+            border-bottom: 2px solid $primary-color1;
           }
         }
       }

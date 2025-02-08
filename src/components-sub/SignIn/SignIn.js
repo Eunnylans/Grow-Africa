@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar";
 import "./SignIn.scss";
 
 const SignIn = () => {
@@ -18,7 +20,11 @@ const SignIn = () => {
 
     const storedUser = JSON.parse(localStorage.getItem("user"));
 
-    if (!storedUser || storedUser.email !== formData.email || storedUser.password !== formData.password) {
+    if (
+      !storedUser ||
+      storedUser.email !== formData.email ||
+      storedUser.password !== formData.password
+    ) {
       alert("Invalid credentials! Please try again.");
       return;
     }
@@ -30,9 +36,8 @@ const SignIn = () => {
 
   return (
     <div className="signin-container">
-      <div className="signin-image">
-        <img src="" alt="" />
-      </div>
+      <Navbar />
+      <div className="signin-image"></div>
       <div className="auth-form">
         <h2>Welcome Back!</h2>
         <p>Sign in to unlock investment opportunities</p>
@@ -61,9 +66,16 @@ const SignIn = () => {
             Sign In
           </button>
         </form>
-        <p>
-          Don’t have an account? <span onClick={() => navigate("/signup-container")}>Sign Up</span>
-        </p>
+        <div className="login-link">
+          <p>
+            Don’t have an account?{" "}
+            <span onClick={() => navigate("/signup-container")}>Sign Up</span>
+          </p>
+          <a href="/">
+            {" "}
+            <FaArrowLeft size={20} color="#6b8e23" />
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -11,7 +11,8 @@ const HeroSection = () => {
         earning sustainable returns
       </p>
       <a href="/contact" className="cta-button">
-        Begin Your Investment Journey <FaArrowRight size={20} color="white" />
+      <span>Begin Your Investment Journey</span> 
+      <FaArrowRight size={22} color="white" />
       </a>
     </section>
   );
