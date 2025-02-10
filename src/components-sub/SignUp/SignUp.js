@@ -10,6 +10,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./SignUp.scss";
 
 const SignUp = () => {
+  const [isClicked, setIsClicked] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -120,12 +121,20 @@ const SignUp = () => {
             />
           </div>
           <div className="terms">
-            <input
-              type="checkbox"
-              name="termsAccepted"
-              checked={formData.termsAccepted}
-              onChange={handleChange}
-            />
+          <input
+          type="checkbox"
+          id="custom-checkbox"
+          name="termsAccepted"
+          checked={formData.termsAccepted}
+          onChange={(e) => {
+            handleChange(e);
+            setIsClicked(e.target.checked);
+          }}
+        />
+            <label
+              htmlFor="custom-checkbox"
+              className={isClicked ? "checked" : ""}
+            ></label>
             <span>
               By creating an account, I agree to our{" "}
               <a href="/terms">Terms of use</a> and{" "}
@@ -143,10 +152,7 @@ const SignUp = () => {
           </p>
           <a href="/">
             {" "}
-            <FaArrowLeft
-              size={20}
-              color="#6b8e23"
-            />
+            <FaArrowLeft size={20} color="#6b8e23" />
           </a>
         </div>
       </div>

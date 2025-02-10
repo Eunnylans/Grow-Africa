@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./SignIn.scss";
 
 const SignIn = () => {
+  const [isClicked, setIsClicked] = useState(false);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -58,7 +59,20 @@ const SignIn = () => {
           />
           <div className="auth-options">
             <label>
-              <input type="checkbox" /> Remember me
+            <input
+            type="checkbox"
+            id="custom-checkbox"
+            name="termsAccepted"
+            checked={formData.termsAccepted}
+            onChange={(e) => {
+              handleChange(e);
+              setIsClicked(e.target.checked);
+            }}
+          />
+              <label
+                htmlFor="custom-checkbox"
+                className={isClicked ? "checked" : ""}
+              ></label><span> Remember me</span>
             </label>
             <a href="/auth-wrapper">Forgot Password?</a>
           </div>

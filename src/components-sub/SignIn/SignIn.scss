@@ -7,7 +7,7 @@
   font-family: $font-family;
 
   .signin-image {
-    width: 50%;
+    width: 100%;
     background: url("../../ux-ux-designs/13.jpg") center/cover no-repeat;
   }
 
@@ -42,6 +42,11 @@
         border-radius: 5px;
       }
 
+      input:focus {
+        border: 2px solid #6a9a01; /* Change border when clicked */
+        outline: none; /* Removes the default blue outline */
+      }
+
       label {
         font-size: 14px;
         display: flex;
@@ -57,6 +62,39 @@
         font-size: 14px;
         margin-bottom: 10px;
         overflow: hidden;
+
+        input[type="checkbox"] {
+          display: none; /* Hide the default checkbox */
+          overflow: hidden;
+        }
+        
+        label {
+          width: 20px;
+          height: 20px;
+          border: 1px solid #6a9a01;
+          display: inline-block;
+          cursor: pointer;
+          position: relative; 
+          overflow: hidden;
+          margin-right: 5px;
+
+        }
+        
+        label.checked {
+          background-color: #6a9a01; /* Background color when checked */
+        }
+        
+        label.checked::after {
+          content: "✔"; /* White checkmark */
+          color: white;
+          font-size: 16px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-weight: bold;
+          overflow: hidden;
+        }
 
         a {
           color: #6b8e23;
