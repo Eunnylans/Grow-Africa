@@ -62,7 +62,7 @@ const SignUp = () => {
       <div className="signup-form">
         <h2>Start Your Investment Journey!</h2>
         <p>
-          Sign up on Cosmos and start investing in sustainable farming today
+          Sign up on Grow Africa and start investing in sustainable farming today
         </p>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
