@@ -1,5 +1,6 @@
 import React from "react";
 import "./Overview.scss";
+import ROIChart from "./ROIChart";
 import Imagemain from "../../ux-ux-designs/Tina-Edwards.png";
 
 
@@ -11,7 +12,7 @@ const Overview = () => {
           <img src={Imagemain} alt="Tina Edwards" className="user-avatar" />
           <div>
             <h2>Tina Edwards</h2>
-            <p>Welcome back to Cosmos 👋</p>
+            <p>Welcome back to Grow Afica 👋</p>
           </div>
         </div>
         <button className="invest-btn">Invest in New Projects</button>
@@ -37,9 +38,9 @@ const Overview = () => {
 
         {/* ROI Growth Overtime */}
         <div className="roi-growth">
-          <h3>ROI Growth Overtime</h3>
+        
           <div className="chart">
-            <img src="/chart-placeholder.png" alt="ROI Chart" />
+          <ROIChart />
           </div>
         </div>
 

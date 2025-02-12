@@ -13,12 +13,12 @@ import "./SideNav.scss";
 const SideNav = () => {
   return (
     <nav className="side-nav">
-      <h2 className="logo">Cosmos</h2>
+      <h2 className="logo">Grow Africa</h2>
       <div className='top-links'>
         <p>Menu</p>
         <ul>
           <li>
-            <NavLink
+            <NavLink 
               to="/overview"
               className={({ isActive }) => (isActive ? "isActive" : "")}
             >

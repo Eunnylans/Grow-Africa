@@ -39,7 +39,7 @@
     }
 
     .invest-btn {
-      background-color: #4caf50;
+      background-color: $primary-color;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -47,7 +47,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #45a049;
+        background-color: $primary-color1;
       }
     }
   }
@@ -57,7 +57,7 @@
     gap: 20px; // Adds space between the two columns
 
     .left-overview {
-      flex: 4; // Equivalent to 60% width
+      flex: 4.3; // Equivalent to 60% width
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -90,7 +90,7 @@
 
       .roi-growth {
         background: white;
-        padding: 15px;
+        padding: 0px;
         border-radius: 8px;
         margin-bottom: 20px;
 
@@ -155,7 +155,7 @@
     }
 
     .right-overview {
-      flex: 2; // Equivalent to 40% width
+      flex: 1.7; // Equivalent to 40% width
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -178,7 +178,7 @@
             background-color: lightgray;
 
             &.active {
-              background-color: #4caf50;
+              background-color: $primary-color;
               color: white;
             }
           }

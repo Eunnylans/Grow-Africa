@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
 import SignIn from "./components-sub/SignIn/SignIn.js";
 import SignUp from "./components-sub/SignUp/SignUp.js";
@@ -10,6 +10,7 @@ import TestimonialPage from "./mainComponent/TestimonialPage/TestimonialPage.js"
 import AuthFlow from "./components-sub/Password/AuthFlow.js";
 import Dashboard from "./components-dashboard/Dashboard/Dashboard.js"; // Import Dashboard
 import ScrollToTopIcon from './components/ScrollToTopIcon/ScrollToTopIcon.js';
+import NotFound from './components-sub/NotFound/NotFound.js';
 
 import "./styles.scss";
 
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/signup-container" element={<SignUp />} />
         <Route path="/signin-container" element={<SignIn />} />
         <Route path="/auth-wrapper" element={<AuthFlow />} />
+        <Route path="/not-found" element={<NotFound />} /> {/* Catch-all 404 route */}
 
         {/* Protected Dashboard Route */}
         <Route 

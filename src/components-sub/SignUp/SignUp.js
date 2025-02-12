@@ -56,9 +56,7 @@ const SignUp = () => {
   return (
     <div className="signup-container">
       <Navbar />
-      <div className="signup-image">
-        <img src="" alt="" />
-      </div>
+      <div className="signup-image"></div>
       <div className="signup-form">
         <h2>Start Your Investment Journey!</h2>
         <p>
@@ -148,10 +146,9 @@ const SignUp = () => {
         </form>
         <div className="login-link">
           <p>
-            {" "}
             Already have an account? <a href="/signin-container">Login</a>{" "}
           </p>
-          <a href="/">
+          <a href="/not-found">
             {" "}
             <FaArrowLeft size={20} color="#6b8e23" />
           </a>

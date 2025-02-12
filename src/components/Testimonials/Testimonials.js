@@ -51,7 +51,7 @@ const Testimonials = () => {
         ))}
       </div>
       <div className="see-more">
-        <a href="#">See More &gt;</a>
+        <a href="/">See More &gt;</a>
       </div>
     </section>
   );
