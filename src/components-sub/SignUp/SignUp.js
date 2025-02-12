@@ -62,7 +62,8 @@ const SignUp = () => {
       <div className="signup-form">
         <h2>Start Your Investment Journey!</h2>
         <p>
-          Sign up on Grow Africa and start investing in sustainable farming today
+          Sign up on Grow Africa and start investing in sustainable farming
+          today
         </p>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -121,16 +122,16 @@ const SignUp = () => {
             />
           </div>
           <div className="terms">
-          <input
-          type="checkbox"
-          id="custom-checkbox"
-          name="termsAccepted"
-          checked={formData.termsAccepted}
-          onChange={(e) => {
-            handleChange(e);
-            setIsClicked(e.target.checked);
-          }}
-        />
+            <input
+              type="checkbox"
+              id="custom-checkbox"
+              name="termsAccepted"
+              checked={formData.termsAccepted}
+              onChange={(e) => {
+                handleChange(e);
+                setIsClicked(e.target.checked);
+              }}
+            />
             <label
               htmlFor="custom-checkbox"
               className={isClicked ? "checked" : ""}

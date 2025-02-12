@@ -171,6 +171,12 @@
   }
 
   .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px; /* Adjust the spacing */
+    font-family: "DM Sans", sans-serif;
+    text-align: center;
     color: #6b911b;
     background: white;
     font-size: 1.2rem;
@@ -192,6 +198,16 @@
     color: white;
     background: #6b911b;
   }
+
+  
+  .icon:hover {
+    stroke: white;
+    fill: white;
+    stroke-width: 0;
+    height: 22px;
+    width: 22px;
+}
+
 
   /* Ensure full responsiveness */
   @media (max-width: 768px) {

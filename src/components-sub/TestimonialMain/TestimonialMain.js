@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 import investor1 from "../../ux-ux-designs/investor1.png";
 import investor10 from "../../ux-ux-designs/investor10.png";
 import {
@@ -178,12 +179,10 @@ const TestimonialMain = () => {
       </section>
 
       <section className="cta">
-        <input
-          type="button"
-          value="Begin Your Investment Journey Today →"
+        <a
           className="cta-button"
           onClick={() => (window.location.href = "/contact")}
-        />
+        > <span>Begin Your Investment Journey Today </span> <FaArrowRight size={22} color="#6b911b" className='icon'/></a>
       </section>
     </div>
   );
