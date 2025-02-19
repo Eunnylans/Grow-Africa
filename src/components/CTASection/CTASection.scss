@@ -1,26 +1,54 @@
+@import "~font-awesome/css/font-awesome.min.css";
 @import "../../variables";
+
+// Variables
+
+$primary-bg: linear-gradient(0deg, #faffef, #faffef);
+$text-color: #141414;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$primary-color: #6b911b;
+$primary-color1: #bfea5b;
+$secondary-color: #000000;
+$navlink-color: #141414;
+$border-color: #ddd;
+$border-color1: solid 2px #6b911b;
+$background-color: white;
+$hover-bg-color: lightgray;
+$font-family: "DM Sans", sans-serif;
+$font-weight: 600;
+$font-weight2: 400;
+$width: 100%;
+$max-width: 1440px;
+$height: auto;
+$max-height: 638px;
+$gap: 150px; // ✅ Reduced gap to make layout tighter
+$letter-spacing: -0.4%;
+$font-size: 36px;
+$line-height: 48px;
+$letter-spacing1: 0%;
+$text-align: center;
 
 .cta-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
-  width: 100%;
-  max-width: 1440px;
+  padding: 4rem 5rem;
+  width: $width;
+  max-width: $max-width;
   height: auto;
   font-family: $font-family;
 
   .cta-container {
     display: flex;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
+    width: $width;
+    max-width: $max-width;
     gap: 3rem;
 
     .cta-image {
       flex: 1;
       img {
-        width: 100%;
+        width: $width;
         max-height: 400px;
         object-fit: cover;
         border-radius: 20px;
@@ -33,29 +61,39 @@
       max-width: 600px;
 
       h2 {
-        font-size: 2.5rem;
-        color: #6b911b;
-        font-weight: bold;
+        color: $primary-color;
         margin-bottom: 1rem;
-        font-family: "DM Sans", sans-serif;
-        line-height: 1.3;
+        font-family: $font-family;
+        width: 520;
+        height: 94;
+        font-weight: $font-weight;
+        font-size: 36px;
+        line-height: 46.87px;
+        letter-spacing: 0%;
       }
 
       p {
-        font-size: 1.2rem;
         color: #9b9d8e;
         margin-bottom: 2rem;
-        font-family: "DM Sans", sans-serif;
+        font-family: $font-family;
+        width: 520;
+        height: 23;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23.44px;
+        letter-spacing: 0%;
       }
 
       .cta-button {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.4%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #6b911b;
-        color: white;
-        font-size: 1.2rem;
-        font-weight: bold;
+        background: $primary-color;
+        color: $background-color;
+        font-weight: $font-weight;
         padding: 1rem 2rem;
         border-radius: 50px;
         text-decoration: none;
@@ -63,9 +101,8 @@
         width: 100%;
         max-width: 600px;
         margin: 0 auto;
-
-        font-family: "DM Sans", sans-serif;
-        text-align: center;
+        font-family: $font-family;
+        text-align: $text-align;
 
         &:hover {
           background-color: #5a7f15;

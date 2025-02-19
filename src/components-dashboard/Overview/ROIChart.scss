@@ -1,53 +1,115 @@
 @import "../../variables";
 
+// Colors
+$primary-color: #6b911b;
+$primary-color1: #cee39d;
+$secondary-color: #000000;
+$border-color: #ddd;
+$border-color1: solid 2px #6b911b;
+$background-color: white;
+$background-color1: rgb(255, 255, 255);
+$hover-bg-color: lightgray;
+
 .chart-container {
     width: 100%;
     max-width: 800px;
-    height: auto;
+    height: auto; 
     margin: auto;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    overflow-y: hidden;
-    overflow-x: hidden;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .chart{
-        display: flex;
-        flex: row;
-        justify-content: space-between;
+    @media (max-width: 768px) {
+        padding: 15px;
+        max-width: 100%;
     }
- 
-  
-  .buttons {
+
+    @media (max-width: 480px) {
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.buttons {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 15px;
-    overflow: hidden;
-  }
-  
-  .buttons button {
+    gap: 10px;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+}
+
+.buttons button {
     background: #eee;
     color: $primary-color;
     border: none;
     padding: 8px 15px;
-    margin-left: 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s ease;
-    overflow: hidden;
-  }
-  
-  .buttons button.active {
+
+    @media (max-width: 480px) {
+        padding: 6px 12px;
+    }
+}
+
+.buttons button.active {
     background: $primary-color;
     color: white;
     font-weight: bold;
-  }
-  
-  .buttons button:hover {
+}
+
+.buttons button:hover {
     background: $primary-color1;
     color: $primary-color;
     font-weight: bold;
-  }
+}
+
+/* ✅ Fix Vertical Scroll Issue */
+.ResponsiveContainer {
+    width: 100% !important;
+    height: 300px !important;
+    max-height: 300px !important;
+    min-height: 200px;
+    overflow: hidden !important;
+
+    @media (max-width: 768px) {
+        height: 250px !important;
+    }
+
+    @media (max-width: 480px) {
+        height: 200px !important;
+    }
+}
+
+/* ✅ Additional Fix for Recharts AreaChart */
+.recharts-wrapper {
+    max-height: 300px !important;
+
+    @media (max-width: 768px) {
+        max-height: 250px !important;
+    }
+
+    @media (max-width: 480px) {
+        max-height: 200px !important;
+    }
 }

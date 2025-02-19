@@ -1,18 +1,41 @@
+@import "~font-awesome/css/font-awesome.min.css";
 @import "../../variables";
 
-$primary-bg: linear-gradient(0deg, #faffef, #faffef),
-              linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
-              linear-gradient(180deg, #ffffff -4.82%, rgba(255, 255, 255, 0) 13.06%);
+// Variables
+
+$primary-bg: linear-gradient(0deg, #faffef, #faffef);
 $text-color: #141414;
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$primary-color: #6b911b;
+$primary-color1: #bfea5b;
+$secondary-color: #000000;
+$navlink-color: #141414;
+$border-color: #ddd;
+$border-color1: solid 2px #6b911b;
+$background-color: white;
+$hover-bg-color: lightgray;
+$font-family: "DM Sans", sans-serif;
+$font-weight: 600;
+$font-weight2: 400;
+$width: 100%;
+$max-width: 1440px;
+$height: auto;
+$max-height: 638px;
+$gap: 150px; // ✅ Reduced gap to make layout tighter
+$letter-spacing: -0.4%;
+$font-size: 36px;
+$line-height: 48px;
+$letter-spacing1: 0%;
+$text-align: center;
 
 // Base styles (for desktop)
 .how-it-works {
   position: relative;
   background: $primary-bg;
-  padding: 1rem 1.5rem;
+  padding: 4rem 5rem; // ✅ Slightly reduced padding to optimize spacing
   text-align: center;
   width: 100%; // Make it full-width for better centering
+  max-width: $max-width;
   height: 674px;
   display: flex;
   flex-direction: column;
@@ -35,10 +58,10 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .container {
-  width: 100%;
-  max-width: 1216px;
+  width: $width;
+  max-width: $max-width;
   height: auto;
-  padding: 60px 0;
+  padding: 4rem 1rem;
   gap: 48px;
   display: flex;
   flex-direction: column;
@@ -47,15 +70,17 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 .section-title {
   max-width: 80%;
-  font-family: "DM Sans", sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 48px;
-  text-align: center;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing1;
+  text-align: $text-align;
   text-decoration: none;
   text-decoration-skip-ink: none;
   color: $text-color;
   margin-bottom: 2rem;
+  color: $navlink-color;
 }
 
 .steps-container {
@@ -89,12 +114,23 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: start; // Center text inside each step
 
   .step-title {
-    font-size: 1.125rem;
-    font-weight: bold;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: $navlink-color;
+    overflow: hidden;
+    padding-bottom: 10px;
   }
 
   .step-description {
-    color: #4a4a4a;
+    color: #9b9d8e;
+    font-family: $font-family;
+    font-weight: $font-weight2;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0%;
   }
 }
 

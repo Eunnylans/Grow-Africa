@@ -148,7 +148,7 @@ const SignUp = () => {
           <p>
             Already have an account? <a href="/signin-container">Login</a>{" "}
           </p>
-          <a href="/not-found">
+          <a href="/dashboard-container">
             {" "}
             <FaArrowLeft size={20} color="#6b8e23" />
           </a>

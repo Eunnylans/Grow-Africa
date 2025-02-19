@@ -3,16 +3,23 @@ import { FaTwitter, FaLinkedin, FaFacebookF, FaEnvelope, FaPhone } from "react-i
 import "./Footer.scss";
 
 const Footer = () => {
+
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  //const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+  //const day = String(currentDate.getDate()).padStart(2, '0');
+
+  const formattedDate = `${year}`;
   return (
     <footer className="footer">
       <div className="footer-container">
         {/* Left Section */}
         <div className="footer-left">
-          <h2>Cosmos</h2>
+        <img src={`${process.env.PUBLIC_URL}/GROW_Logo_White_Transparent.svg`} alt="Logo" />
           <p>Invest in amazing agro opportunities that create more happy people in the world.</p>
           <div className="contact-info">
-            <p><FaEnvelope /> Companyemail@email.com</p>
-            <p><FaPhone /> +234 1234 567 8900</p>
+            <p><FaEnvelope />partnership@growafrica.co</p>
+            <p><FaPhone />+234 812 528 8367</p>
           </div>
         </div>
 
@@ -54,7 +61,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="footer-bottom">
-        <p>© 2024 Cosmos. All rights reserved.</p>
+      <p>© {formattedDate} Grow Africa. All rights reserved.</p>
         <div className="social-icons">
           <FaTwitter />
           <FaLinkedin />

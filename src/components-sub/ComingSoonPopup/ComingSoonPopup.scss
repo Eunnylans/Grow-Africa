@@ -1,0 +1,89 @@
+// styles/ComingSoonPopup.scss
+
+// The backdrop that covers the whole screen
+.coming-soon-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(45deg, #a0c451, #6a9a01, #fcfff5, #6b911b); /* Initial gradient */
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.coming-soon-backdrop .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Make sure the video is in the background */
+}
+
+
+// The main container for the popup
+.coming-soon-popup {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 384px;
+  transition: all 0.3s ease-out;
+}
+
+// Card inside the popup
+.coming-soon-popup-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+// Header styles for the popup
+.coming-soon-popup h2 {
+  font-size: 1.25rem; // Adjust size as needed
+  font-weight: bold;
+  color: #333;
+}
+
+// Paragraph styles for the popup message
+.coming-soon-popup p {
+  margin-top: 8px;
+  color: #666;
+}
+
+// styles/ComingSoonPopup.scss
+
+.countdown-timer {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.back-to-home-button {
+  background-color: #6b911b;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+

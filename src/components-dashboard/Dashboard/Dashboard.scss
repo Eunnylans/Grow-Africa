@@ -1,23 +1,69 @@
 @import "../../variables";
 
 .dashboard-container {
-    display: flex;
-    height: 100vh;
-    background-color: #f8f8f8;
-    font-family: $font-family;
+  display: flex;
+  //lex-direction: row;
+  height: 100vh;
+  background-color: #f8f8f8;
+  font-family: $font-family;
+
+  // Desktop styles
+  @media (min-width: 769px) {
+    flex-direction: row;
+    // Ensuring sidebar does not overlap content
+    .sidebar {
+      width: 250px; // Sidebar fixed width
+    }
+    .content-area {
+      flex: 1; // Takes the remaining width
+      margin-left: 290px; // Ensures content does not overlap with the sidebar
+    }
   }
-  
-  .sidebar {
-    width: 250px;
-    background: white;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+  // Mobile styles (max-width 768px)
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack sidebar on top for smaller screens
+    height: auto; // Adjust height for smaller screens
+
+    .sidebar {
+      width: 100%;
+      text-align: center;
+      box-shadow: none;
+    }
+
+    .content-area {
+      padding: 15px; // Adjust padding for mobile screens
+    }
   }
-  
-  .content-area {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-    background: #ffffff;
+}
+
+.sidebar {
+  background: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  flex: 0 0 250px; /* Sidebar stays fixed */
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #ffffff;
+}
+
+// Ensure logout button is positioned correctly
+.logout-btn {
+  margin-top: 20px; // Adjust logout button position
+  padding: 10px;
+  background-color:#6b911b;;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #a3bd68;;
   }
-  
+}

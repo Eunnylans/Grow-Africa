@@ -1,83 +1,90 @@
 @import "~font-awesome/css/font-awesome.min.css";
 @import "../../variables";
 
+// Variables
+$primary-color: #6b911b;
+$primary-color1: #bfea5b;
+$secondary-color: #000000;
+$navlink-color: #141414;
+$border-color: #ddd;
+$border-color1: solid 2px #6b911b;
+$background-color: white;
+$hover-bg-color: lightgray;
+$font-family: "DM Sans", sans-serif;
+$font-weight: 600;
+$width: 100%;
+$max-width: 1440px;
+$height: auto;
+$max-height: 638px;
+$gap: 150px; // ✅ Reduced gap to make layout tighter
+$letter-spacing: -0.4%;
+
 .features {
-  width: 100%;
-  height: auto;  // ✅ Change from 100vh to auto so content expands naturally
   display: flex;
-  justify-content: space-between;
+  flex-direction: row; // ✅ Ensures text is on the left and image is on the right
   align-items: center;
-  padding: 5rem;
-  background: #ffffff;
+  justify-content: space-between;
+  width: $width;
+  max-width: $max-width;
+  height: auto;
+  gap: $gap;
+  padding: 4rem 5rem; // ✅ Slightly reduced padding to optimize spacing
+  background: $background-color;
   overflow: hidden;
   font-family: $font-family;
 
   .feature-left {
     flex: 1;
-    padding-right: 20px;
-    max-width: 488px;
-    display: flex;  // ✅ Ensures inner-up and inner-down stack properly
+    max-width: 500px;
+    padding-right: 40px; // ✅ Adds spacing between text and image
+    display: flex;
     flex-direction: column;
-    overflow: hidden;
+    gap: 30px;
 
     .inner-up {
-      width: 100%;
-      gap: 16px;
-
       h2 {
-        margin-bottom: 1rem;
-        color: #6b911b;
-        font-family: "DM Sans";
+        color: $primary-color;
+        font-weight: $font-weight;
         font-size: 36px;
-        font-weight: 600;
         line-height: 44px;
-        text-align: left;
-        overflow: hidden;
+        letter-spacing: $letter-spacing;
+        margin-bottom: 1rem;
+        max-width: 100%; // ✅ Fixes scrolling issue
+        overflow: visible; // ✅ Ensures text is fully visible
       }
 
       .paragraph {
-        width: 100%;
-        font-family: "DM Sans";
         font-size: 18px;
+        font-weight: 400;
+        color: #9b9d8e;
         line-height: 24px;
-        text-align: left;
-        color: #333;
       }
     }
 
     .inner-down {
-      width: 100%;
-      height: auto;
-
       h4 {
-        color: #6b911b;
-        font-family: "DM Sans";
+        color: $primary-color;
         font-size: 20px;
         font-weight: 600;
-        text-align: left;
         margin-bottom: 1rem;
       }
 
       ul {
         padding-left: 0;
+        width: 100%;
+        list-style: none;
 
         li {
           display: flex;
           align-items: center;
-          font-size: 1.1rem;
-          color: #34495e;
-          margin-bottom: 10px;
-
-          font-family: DM Sans;
           font-size: 18px;
-          font-weight: 400;
-          line-height: 24px;
-          text-align: left;
+          color: #9b9d8e;
+          margin-bottom: 10px;
 
           i {
             margin-right: 10px;
-            color: #6b911b;
-            font-size: 1.4rem;
+            color: $primary-color;
+            font-size: 18px;
           }
         }
       }
@@ -87,36 +94,48 @@
   .feature-right {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: center; // ✅ Keeps image properly aligned
+    max-width: 500px; // ✅ Prevents it from taking too much space
 
     img {
-      max-width: 100%;
+      width: 100%;
+      max-width: 500px; // ✅ Limits image size to avoid excess space
       height: auto;
       border-radius: 32px;
     }
   }
 
-  // ✅ Responsive Fix
+  // ✅ Responsive Fix - Always Keep Image on Right
   @media (max-width: 1024px) {
-    flex-direction: column;
-    padding: 3rem;
+    flex-direction: row;
     gap: 40px;
+    padding: 3rem;
 
     .feature-left {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 2rem;  // ✅ Adds spacing before image
-      order: -1;  // ✅ Moves text above image
+      max-width: 100%;
+      padding-right: 20px;
     }
 
     .feature-right {
-      width: 100%;
-      text-align: center;
+      max-width: 500px; // ✅ Keeps image within a reasonable size
     }
   }
 
   @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: left;;
+    gap: 30px;
+
+    .feature-left {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    .feature-right {
+      width: 100%;
+      max-width: 400px; // ✅ Ensures image doesn't take too much space
+    }
+
     .inner-up h2 {
       font-size: 28px;
     }
@@ -133,34 +152,16 @@
   @media (max-width: 480px) {
     padding: 2rem;
 
-    .feature-left {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 2rem; // ✅ Adds spacing before image
-      order: -1; // ✅ Moves text above image
-    }
-
-    .feature-right {
-      width: 100%;
-      text-align: center;
-    }
-
     .inner-up h2 {
       font-size: 24px;
     }
 
     .paragraph {
       font-size: 14px;
-      margin-bottom: 2rem;
     }
 
     .inner-down h4 {
       font-size: 16px;
-    }
-
-    ul {
-      padding-left: 0;
-      list-style: none;
     }
   }
 }

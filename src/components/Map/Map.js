@@ -1,40 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import React from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+
+const containerStyle = {
+  width: "100%",
+  height: "400px",
+};
+
+const center = {
+  lat: -34.397, // Example latitude
+  lng: 150.644, // Example longitude
+};
 
 const Map = () => {
-  const [mapLoaded, setMapLoaded] = useState(false);
-  
-  const containerStyle = {
-    width: '100%',
-    height: '400px',
-  };
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: "AIzaSyAW3HtjZDmtsXGlGIpUTlVVZLPSf1q-930", // Replace with your valid API Key
+  });
 
-  const center = {
-    lat: -34.397, // Example latitude
-    lng: 150.644, // Example longitude
-  };
-
-  const handleLoad = () => {
-    setMapLoaded(true);
-  };
+  if (loadError) return <div>Error loading maps</div>;
+  if (!isLoaded) return <div>Loading Map...</div>;
 
   return (
-    <LoadScript
-      googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY"
-      onLoad={handleLoad}
-    >
-      {mapLoaded ? (
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={8}
-        >
-          <Marker position={center} />
-        </GoogleMap>
-      ) : (
-        <div>Loading Map...</div>
-      )}
-    </LoadScript>
+    <div style={{ position: "relative" }}>
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={8}>
+        <Marker position={center} />
+      </GoogleMap>
+    </div>
   );
 };
 

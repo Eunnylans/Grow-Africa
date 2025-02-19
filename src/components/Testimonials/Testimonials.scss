@@ -1,19 +1,47 @@
+@import "~font-awesome/css/font-awesome.min.css";
 @import "../../variables";
 
+// Variables
+$primary-bg: linear-gradient(0deg, #faffef, #faffef);
+$text-color: #141414;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$primary-color: #6b911b;
+$primary-color1: #bfea5b;
+$secondary-color: #000000;
+$navlink-color: #141414;
+$border-color: #ddd;
+$border-color1: solid 2px #6b911b;
+$background-color: white;
+$hover-bg-color: lightgray;
+$font-family: "DM Sans", sans-serif;
+$font-weight: 600;
+$font-weight2: 400;
+$width: 100%;
+$max-width: 1440px;
+$height: auto;
+$max-height: 638px;
+$gap: 150px; // ✅ Reduced gap to make layout tighter
+$letter-spacing: -0.4%;
+$font-size: 36px;
+$line-height: 48px;
+$letter-spacing1: 0%;
+$text-align: center;
+
 .testimonials {
-  text-align: center;
+  text-align: $text-align;
   padding: 4rem 2rem;
-  background: #ffffff;
-  width: 100%;
-  max-width: 1440px;
+  background: $background-color;
+  width: $width;
+  max-width: $max-width;
   margin-top: 7%;
   height: auto;
   border-top: 1px solid #00000026;
   font-family: $font-family;
 
   .testimonials-header {
-    background: url(../../ux-ux-designs/testimonial-header.png) no-repeat center/cover;
-    width: 100%;
+    background: url(../../ux-ux-designs/testimonial-header.png) no-repeat
+      center/cover;
+    width: $width;
     height: min(400px, 50vh);
     color: #ffffff;
     display: flex;
@@ -22,14 +50,21 @@
     justify-content: center;
     padding: 2rem;
     h2 {
-      font-size: clamp(1.8rem, 2.5vw, 2.5rem);
-      font-weight: bold;
-      font-family: "DM Sans", sans-serif;
+      font-size: 36px;
+      font-weight: $font-weight;
+      font-family: $font-family;
+      line-height: 46.87px;
+      letter-spacing: 0%;
       margin-bottom: 0.5rem;
     }
+
     p {
-      font-size: clamp(1rem, 1.2vw, 1.2rem);
       max-width: 80%;
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23.44px;
+      letter-spacing: 0%;
     }
   }
 
@@ -40,6 +75,8 @@
     flex-wrap: wrap;
     margin-top: -5rem;
     padding: 0 1rem;
+    width: $width;
+    max-width: $max-width;
 
     .testimonial-card {
       background: #ffffff;
@@ -64,18 +101,36 @@
       .testimonial-content {
         padding: 1rem;
         overflow: hidden;
+        text-align: left; // ✅ Ensures all content is aligned to the left
+
         h3 {
-          font-size: 1.4rem;
+          font-family: $font-family;
+          font-weight: 500;
+          font-size: 21px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          color: $navlink-color;
+          overflow: hidden;
         }
+
         p {
           color: #9b9d8e;
-          font-size: 1rem;
+          font-family: $font-family;
+          font-weight: $font-weight2;
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: 0%;
         }
+
         span {
           display: block;
           margin-top: 1.5rem;
-          font-size: 0.9rem;
-          color: #000000;
+          color: #000000bf;
+          font-family: $font-family;
+          font-weight: $font-weight2;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0%;
         }
       }
     }
@@ -83,17 +138,21 @@
 
   .see-more {
     display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+    justify-content: flex-end; // ✅ Aligns content to the right
+    margin-top: 5rem; // ✅ Adds spacing from the top
+    width: 100%; // ✅ Ensures full width if parent is restricted
+    padding-right: 7rem;
 
     a {
-      color: #4a9f4a;
-      font-weight: bold;
+      color: $primary-color;
+      font-weight: $font-weight;
       text-decoration: none;
       font-size: 1rem;
+      transition: color 0.3s ease-in-out; // ✅ Smooth hover effect
 
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        color: $primary-color; // ✅ Darker green on hover
       }
     }
   }

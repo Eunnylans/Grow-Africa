@@ -13,19 +13,19 @@ const getCurrentDate = () => {
 const testimonials = [
   {
     name: "John Adedeji",
-    message: "Cosmos Agritech transformed my farming business!",
+    message: "Grow Africa transformed my farming business!",
     date: getCurrentDate(),
     image: John
   },
   {
     name: "Obinna John",
-    message: "I'm grateful for the support from Cosmos.",
+    message: "I'm grateful for the support from Grow Africa.",
     date: getCurrentDate(),
     image: Obinna
   },
   {
     name: "Chika Nwosu",
-    message: "Investing in Cosmos was a game changer in the agric sector",
+    message: "Investing in Grow Africa was a game changer in the agric sector",
     date: getCurrentDate(),
     image: Chika
   },

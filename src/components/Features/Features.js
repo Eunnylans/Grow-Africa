@@ -9,7 +9,7 @@ const Features = () => {
         <div className="inner-up">
           <h2>Empowering Agriculture, Enriching Lives!</h2>
           <p className="paragraph">
-            At Cosmos, we bridge the gap between investors and farmers. Your
+            At Grow Afica, we bridge the gap between investors and farmers. Your
             funding empowers local farmers to grow high-potential crops,
             increase yields, and contribute to food security
           </p>

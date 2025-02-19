@@ -12,7 +12,7 @@ const HeroSection = () => {
       </p>
       <a href="/contact" className="cta-button">
       <span>Begin Your Investment Journey</span> 
-      <FaArrowRight size={22} color="white" />
+      <FaArrowRight size={18} color="white" />
       </a>
     </section>
   );

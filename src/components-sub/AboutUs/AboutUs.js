@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Image1 from "../../ux-ux-designs/21.jpg";
 import Image3 from "../../ux-ux-designs/17.jpg";
 import Image2 from "../../ux-ux-designs/19.jpg";
 import Image4 from "../../ux-ux-designs/20.jpg";
+import Image1 from "../../ux-ux-designs/21.jpg";
 import "./AboutUs.scss"; // Import your SCSS file for styling
 
-import mission1 from "../../ux-ux-designs/mission1.png";
+import mission1 from "../../ux-ux-designs/18.jpg";
 import mission2 from "../../ux-ux-designs/mission2.png";
 import mission3 from "../../ux-ux-designs/mission3.png";
 
@@ -86,7 +86,7 @@ const AboutUs = () => {
             <h2 className="section-title">How it all Began</h2>
             <p className="subtitle">Our Story</p>
             <p className="story-text">
-              Cosmos Agritech, founded in [Year], is revolutionizing Nigerian
+              Grow Africa, founded in [Year], is revolutionizing Nigerian
               agriculture. We connect smallholder farmers with investors,
               empowering them to increase yields, improve livelihoods, and
               protect the environment. Key milestones include our first major
@@ -125,14 +125,14 @@ const AboutUs = () => {
           </div>
 
           <div className="about-text">
-            <h2 className="title">Meet Cosmos AgriTech</h2>
-            <h3 className="subtitle">“WHO WE ARE”</h3>
+            <h2 className="title">Meet Grow Africa</h2>
+            <h3 className="subtitle">“Who We Are”</h3>
             <p className="description">
-              Cosmos Agritech connects investors with smallholder farmers,
-              driving food security and sustainable growth through impactful
+              Grow Africa connects investors with smallholder farmers, driving
+              food security and sustainable growth through impactful
               agricultural investments.
             </p>
-            <h3 className="subtitle">“WHAT WE DO”</h3>
+            <h3 className="subtitle">“What We Do”</h3>
             <p className="description">
               We empower smallholder farmers by providing them with access to
               funding and resources, enabling them to cultivate crops, increase

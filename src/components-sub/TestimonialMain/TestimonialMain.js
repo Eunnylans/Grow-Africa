@@ -20,6 +20,18 @@ import investor6 from "../../ux-ux-designs/investor6.png";
 import investor7 from "../../ux-ux-designs/investor7.png";
 import investor8 from "../../ux-ux-designs/investor8.png";
 import investor9 from "../../ux-ux-designs/investor9.png";
+
+
+import investor19 from "../../ux-ux-designs/investor12.png";
+import investor20 from "../../ux-ux-designs/investor13.png";
+import investor21 from "../../ux-ux-designs/investor14.png";
+import investor22 from "../../ux-ux-designs/investor15.png";
+import investor23 from "../../ux-ux-designs/investor16.png";
+import investor24 from "../../ux-ux-designs/investor17.png";
+import investor25 from "../../ux-ux-designs/investor2.png";
+import investor26 from "../../ux-ux-designs/investor3.png";
+import investor27 from "../../ux-ux-designs/investor4.png";
+import investor28 from "../../ux-ux-designs/investor5.png";
 import playButton from "../../ux-ux-designs/Vector-play.png";
 
 import image1 from "../../ux-ux-designs/rect1.png";
@@ -27,68 +39,67 @@ import image2 from "../../ux-ux-designs/rect2.png";
 import image3 from "../../ux-ux-designs/rect3.png";
 import image4 from "../../ux-ux-designs/rect4.png";
 import image5 from "../../ux-ux-designs/rect5.png";
-import image6 from "../../ux-ux-designs/rect6.png"; 
+import image6 from "../../ux-ux-designs/rect6.png";
 
 import "./TestimonialMain.scss";
 
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    position: "CEO Company Name - Investor",
-    text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in.",
+    name: "Michael Johnson",
+    position: "Founder & CEO - AgriTech Solutions",
+    text: "Grow Africa invests in agricultural innovation, transforming farms with advanced solutions. We enhance productivity and drive sustainability. Our goal is to revolutionize agribusiness through impactful strategies. With technology-driven methods, we empower farmers and investors, ensuring sustainable growth in the sector.",
     image: image1,
     color: "green",
     quote: "“",
   },
   {
     id: 2,
-    name: "John Doe",
-    position: "CEO Company Name - Investor",
-    text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt.",
+    name: "Sophia Williams",
+    position: "Managing Director - Green Harvest",
+    text: "Our investments foster technological advancements, helping agribusinesses scale. We integrate sustainability with economic growth, creating long-term value.",
     image: image2,
     color: "yellow",
     quote: "“",
   },
   {
     id: 3,
-    name: "John Doe",
-    position: "CEO Company Name - Investor",
-    text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in..",
+    name: "David Smith",
+    position: "Investor & Advisor - AgriFuture Ventures",
+    text: "Grow Africa invests in agricultural innovation, transforming farms with advanced solutions. We enhance productivity and drive sustainability. Our goal is to revolutionize agribusiness through impactful strategies. With technology-driven methods, we empower farmers and investors, ensuring sustainable growth in the sector.",
     image: image3,
     color: "green",
     quote: "“",
   },
   {
     id: 4,
-    name: "John Doe",
-    position: "CEO Company Name - Investor",
-    text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare.",
+    name: "Emily Brown",
+    position: "Head of Investments - AgriFund Global",
+    text: "We support farmers and businesses through cutting-edge agricultural investments, ensuring high yields and economic progress.",
     image: image4,
     color: "yellow",
     quote: "“",
   },
-
   {
     id: 5,
-    name: "John Doe",
-    position: "CEO Company Name - Investor",
-    text: "Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in..",
+    name: "James Anderson",
+    position: "Executive Director - Sustainable Agri",
+    text: "Grow Africa invests in agricultural innovation, transforming farms with advanced solutions. We enhance productivity and drive sustainability. Our goal is to revolutionize agribusiness through impactful strategies. With technology-driven methods, we empower farmers and investors, ensuring sustainable growth in the sector.",
     image: image5,
     color: "green",
     quote: "“",
   },
   {
     id: 6,
-    name: "John Doe",
-    position: "CEO Company Name - Investor",
-    text: "PPellentesque blandit ligula non venenatis dapibus. Maecenas eleifend metus ut velit iaculis ornare. Quisque commodo commodo tincidunt. Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec lobortis magna porta in..",
+    name: "Olivia Martinez",
+    position: "Agribusiness Consultant - Future Farms",
+    text: "Grow Africa fosters agricultural success with technology-driven investments. We provide solutions that optimize productivity, supporting global food security and economic stability.",
     image: image6,
     color: "yellow",
     quote: "“",
   },
 ];
- 
+
 const investors = [
   investor1,
   investor2,
@@ -108,11 +119,21 @@ const investors = [
   investor16,
   investor17,
   investor18,
+
+  investor19,
+  investor20,
+  investor21,
+  investor22,
+  investor23,
+  investor24,
+  investor25,
+  investor26,
+  investor27,
+  investor28,
 ];
 
-
 const renderImage = (src) => {
-  if (typeof src === 'string' && src.startsWith('data:')) {
+  if (typeof src === "string" && src.startsWith("data:")) {
     return src; // Base64 image
   } else {
     return src; // Static import (already resolved to a URL)
@@ -126,7 +147,7 @@ const TestimonialMain = () => {
     <div className="testimonials">
       <div className="happy-investors">
         <div className="investors-container">
-           {investors.map((investor, index) => {
+          {investors.map((investor, index) => {
             const randomX = Math.random() * 90 + "%"; // Random X position
             const randomY = Math.random() * 80 + "%"; // Random Y position
 
@@ -153,20 +174,27 @@ const TestimonialMain = () => {
       <section className="video-section">
         <div className="video-thumbnail">
           {" "}
-          <img className="play-button" src={playButton} alt="Play Button" />
+          <a
+            href="https://youtu.be/5H9YY7VY10g"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="play-button" src={playButton} alt="Play Button" />
+          </a>
         </div>
         <blockquote>
-          “Pellentesque blandit ligula non venenatis dapibus. Maecenas eleifend
-          metus ut velit iaculis ornare. Quisque commodo commodo tincidunt.
-          Fusce eget ipsum tincidunt, viverra leo id, hendrerit ante. Nam
-          malesuada id tellus et ultrices. Morbi egestas consectetur ligula, nec
-          lobortis magna porta in.”
+          "Grow Africa fosters innovation in agriculture through strategic
+          investments. We empower growth by integrating technology and
+          sustainability. Every venture enhances productivity, ensuring lasting
+          impact. Our mission is to transform agribusiness, driving progress and
+          resilience. With cutting-edge solutions, we cultivate success for
+          farmers, businesses, and communities."
         </blockquote>
       </section>
 
       <section className="testimonials-cover">
         {testimonials.map((testimonial, index) => (
-          <div key={index}> {/* Add key prop here */}
+          <div key={index} className="testimonial-item">
             <img src={testimonial.image} alt={testimonial.name} />
             <div className={`testimonial-card ${testimonial.color}`}>
               <h3>{testimonial.name}</h3>
@@ -179,10 +207,10 @@ const TestimonialMain = () => {
       </section>
 
       <section className="cta">
-        <a
-          className="cta-button"
-          onClick={() => (window.location.href = "/contact")}
-        > <span>Begin Your Investment Journey Today </span> <FaArrowRight size={22} color="#6b911b" className='icon'/></a>
+        <a href="/contact" className="cta-button">
+          <span>Begin Your Investment Journey</span>
+          <FaArrowRight size={18} color="white" />
+        </a>
       </section>
     </div>
   );

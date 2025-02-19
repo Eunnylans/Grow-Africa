@@ -1,172 +1,339 @@
+@import "~font-awesome/css/font-awesome.min.css";
 @import "../../variables";
+
+// Variables
+$primary-bg: linear-gradient(0deg, #faffef, #faffef);
+$text-color: #141414;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$primary-color: #6b911b;
+$primary-color1: #bfea5b;
+$secondary-color: #000000;
+$navlink-color: #141414;
+$border-color: #ddd;
+$border-color1: solid 2px #6b911b;
+$background-color: white;
+$hover-bg-color: lightgray;
+$font-family: "DM Sans", sans-serif;
+$font-weight: 600;
+$font-weight1: 500;
+$font-weight2: 400;
+$width: 100%;
+$max-width: 1440px;
+$height: auto;
+$max-height: 638px;
+$gap: 150px;
+$letter-spacing: -0.4%;
+$font-size: 36px;
+$line-height: 48px;
+$letter-spacing1: 0%;
+$text-align: center;
+$font-size2: 18px;
+
+//button
+$button-width: 400px;
+$button-height: 24px;
+$button-gap: 8px;
+//button-text
+$button-text-width: 322;
+$button-text-height: 24;
+$button-line-height: 24px;
 
 .testimonials {
   text-align: center;
   font-family: $font-family;
-  border-top: 2px solid #eeeaea;
-   
+  border-top: 0.125rem solid #eeeaea;
+
   .happy-investors {
     text-align: center;
-    padding: 50px;
+    padding: 3.125rem;
     background-color: white;
-    height: 100vh; // Full viewport height
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 5rem;
 
     .investors-container {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(3.125rem, 1fr));
+      gap: 2rem; /* Space between images */
+      justify-content: space-evenly;
+      align-items: center;
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      padding: 10px;
-      margin-top: 20px;
+      padding: 2rem;
+    }
 
-      .investor-image {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-        position: absolute;
-        animation: floatAnimation 10s infinite alternate ease-in-out;
-      }
+    .investor-image {
+      width: 3.125rem;
+      height: 3.125rem;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: floatRandom 6s infinite alternate ease-in-out;
+      position: absolute;
+      top: calc(100vh * var(--random-y)); /* Random vertical position */
+      left: calc(100vw * var(--random-x)); /* Random horizontal position */
     }
 
     .investors-info {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       text-align: center;
       background: rgba(255, 255, 255, 0.8);
-      padding: 20px;
+      padding: 1.25rem;
       width: 80%;
-      max-width: 949px;
-      height: auto;
+      max-width: 43.75rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 16px;
+      gap: 1rem;
       overflow: hidden;
+      position: relative;
 
       h1 {
-        font-size: clamp(2rem, 5vw, 60px);
-        font-weight: 600;
-        line-height: 1.2;
-        overflow: hidden;
+        font-size: 3.75rem;
+        line-height: 4.875rem;
+        color: $secondary-color;
       }
 
       p {
-        max-width: 60%;
-        font-size: clamp(1rem, 2vw, 18px);
-        font-weight: 500;
+        max-width: 75%;
         line-height: 1.5;
         margin: 0 auto;
-        overflow: hidden;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        color: #9b9d8e;
       }
     }
   }
 
-  // Floating animation for images
-  @keyframes floatAnimation {
+  @keyframes floatRandom {
     from {
-      transform: translateY(0);
+      transform: translateY(0) rotate(0deg);
     }
     to {
-      transform: translateY(40px);
+      transform: translateY(1.5rem) rotate(10deg);
     }
   }
 
   .video-section {
-    padding: 40px 20px;
+    padding: 2.5rem 1.25rem;
     text-align: center;
+    position: relative;
 
     .video-thumbnail {
       width: 80%;
-      max-width: 600px;
+      max-width: 37.5rem;
       margin: 0 auto;
-      height: 300px;
+      height: 18.75rem;
       background: url("../../ux-ux-designs/port-you.png") no-repeat center
-        center/cover;
+        center / cover;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 10px;
+      border-radius: 0.625rem;
     }
 
     blockquote {
       width: 80%;
-      max-width: 600px;
-      margin: 50px auto 0;
-      font-size: clamp(1rem, 2vw, 18px);
-      font-weight: 500;
+      max-width: 37.5rem;
+      margin: 3.125rem auto 0;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
       text-align: center;
-      overflow: hidden;
+      color: #9b9d8e;
     }
   }
 
+  @media (max-width: 1024px) {
+    .happy-investors {
+      margin-top: 5rem;
+      padding: 2.5rem;
+      min-height: auto;
+
+      .investor-image {
+        width: 2.125rem;
+        height: 2.125rem;
+      }
+
+      .investors-info {
+        max-width: 37.5rem;
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+    .video-section {
+      .video-thumbnail {
+        height: 15rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .happy-investors {
+      margin-top: 5rem;
+      padding: 2rem;
+
+      .investor-image {
+        width: 2.125rem;
+        height: 2.125rem;
+      }
+
+      .investors-info {
+        width: 90%;
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    .video-section {
+      .video-thumbnail {
+        height: 12rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .happy-investors {
+      padding: 1.5rem;
+      margin-top: 7rem;
+      margin-bottom: 3rem;
+
+      .investor-image {
+        width: 1.125rem;
+        height: 1.125rem;
+      }
+
+      .investors-info {
+        width: 95%;
+        padding: 1rem;
+        overflow: hidden;
+        h1 {
+          font-size: 2rem;
+          line-height: 2.5rem;
+          overflow: hidden;
+        }
+        p {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+    .video-section {
+      .video-thumbnail {
+        width: 100%;
+        height: 10rem;
+      }
+      blockquote {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  // Testimonial Section
+
   .testimonials-cover {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 40px;
+    grid-template-columns: repeat(3, 1fr); // 3 columns for larger screens
+    grid-auto-rows: auto; // Ensure rows adjust automatically
+    gap: 1.25rem; // 20px → 1.25rem
+    padding: 4rem 5rem;
     justify-content: center;
 
     img {
       width: 100%;
-      height: 350px;
+      height: 24.375rem; // 390px → 24.375rem
+      object-fit: cover;
+      border-radius: 1.25rem; // 20px → 1.25rem
     }
 
     .testimonial-card {
       color: white;
       text-align: left;
       width: 100%;
-      //max-width: 428px;
-      height: 400px;
-      padding: 30px 39px;
-      border-radius: 20px;
+      height: 25rem; // 400px → 25rem
+      padding: 0.9375rem 1.1875rem; // 15px → 0.9375rem, 19px → 1.1875rem
+      border-radius: 1.25rem; // 20px → 1.25rem
       overflow: hidden;
 
-      h3,
-      .position,
+      h3 {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 1.25rem; // 20px → 1.25rem
+        color: #ffffffe5;
+        padding-bottom: 0.625rem; // 10px → 0.625rem
+      }
+
+      .position {
+        font-family: $font-family;
+        font-weight: $font-weight1;
+        font-size: 1.125rem; // 18px → 1.125rem
+        color: $navlink-color;
+        padding-bottom: 0.625rem; // 10px → 0.625rem
+      }
+
       .text {
-        padding-bottom: 20px;
+        padding-bottom: 1.25rem; // 20px → 1.25rem
+        font-family: $font-family;
+        font-weight: $font-weight1;
+        font-size: 1.125rem; // 18px → 1.125rem
+        color: #ffffffe5;
       }
 
       .quote {
-        font-size: clamp(2rem, 4vw, 83px);
-        font-weight: 500;
-        line-height: 1.5;
+        font-family: $font-family;
+        font-weight: $font-weight1;
+        font-size: 3.140625rem; // 50.25px → 3.140625rem
+        color: #4f6f0d;
       }
 
       &.green {
-        background: #4caf50;
+        background: $primary-color;
       }
       &.yellow {
-        background: #ffb300;
+        background: #d6a22f;
       }
     }
   }
+
+  // Responsive adjustments
+  @media (max-width: 1024px) {
+    .testimonials-cover {
+      grid-template-columns: repeat(2, 1fr); // Switch to 2 columns
+    }
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-cover {
+      grid-template-columns: repeat(1, 1fr); // Switch to 1 column
+    }
+  }
+
+  @media (max-width: 480px) {
+    .testimonials-cover {
+      padding: 4rem 1.2rem;
+      grid-template-columns: repeat(1, 1fr); // Switch to 1 column
+    }
+  }
+
+  //cta section
 
   .cta {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 1.25rem; /* 20px -> 1.25rem */
     width: 100%;
-    max-width: 500px; /* Ensures it doesn’t get too big */
-    height: 48px;
-    border: 1px solid #6b911b;
-    border-radius: 200px;
+    max-width: 31.25rem; /* 500px -> 31.25rem */
     background: white;
-    margin: 50px auto; /* Centers the section horizontally */
-    text-align: center; /* Ensures inline elements inside are centered */
+    margin: 3.125rem auto; /* 50px -> 3.125rem */
+    text-align: center;
     overflow: hidden;
   }
 
@@ -174,173 +341,48 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3px; /* Adjust the spacing */
-    font-family: "DM Sans", sans-serif;
-    text-align: center;
-    color: #6b911b;
-    background: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    border: none;
-    cursor: pointer;
     width: 100%;
-    max-width: 500px;
-  }
+    max-width: $button-width; /* Assuming $button-width is in rem */
+    gap: $button-gap; /* Assuming $button-gap is in rem */
+    background-color: $primary-color;
+    padding: 1rem 2rem; /* 16px 32px -> 1rem 2rem */
+    border-radius: 3.125rem; /* 50px -> 3.125rem */
+    text-decoration: none;
+    margin: 0 auto;
 
-  .cta:hover {
-    background: #6b911b;
+    span {
+      width: 20.125rem; /* 322px -> 20.125rem */
+      height: 1.5rem; /* 24px -> 1.5rem */
+      font-family: $font-family;
+      font-weight: $font-weight;
+      font-size: $font-size2; /* Assuming $font-size2 is in rem */
+      line-height: $button-line-height; /* Assuming $button-line-height is in rem */
+      letter-spacing: $letter-spacing; /* Assuming $letter-spacing is in rem */
+      text-align: $text-align;
+      color: $background-color;
+    }
   }
 
   .cta-button:hover {
-    color: white;
-    background: #6b911b;
+    background-color: #5a7f15;
   }
 
-  
-  .icon:hover {
-    stroke: white;
-    fill: white;
-    stroke-width: 0;
-    height: 22px;
-    width: 22px;
-}
-
-
-  /* Ensure full responsiveness */
+  /* Media Queries */
   @media (max-width: 768px) {
     .cta {
-      width: 90%;
-      max-width: 100%;
+      padding: 1rem; /* 16px -> 1rem */
+      margin: 2.5rem auto; /* 40px -> 2.5rem */
     }
 
     .cta-button {
-      font-size: 0.7rem;
-      padding: 0.8rem 1.5rem;
+      padding: 0.75rem 1.5rem; /* 12px 24px -> 0.75rem 1.5rem */
     }
-  }
 
-  /* Responsive Design */
-
-  @media (max-width: 1024px) {
-    .testimonials-cover {
-      grid-template-columns: repeat(2, 1fr);
-      padding: 30px;
-    }
-    .video-section {
-      margin-top: 50px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .testimonials-cover {
-      grid-template-columns: repeat(1, 1fr);
-      //max-width: 100%;
-      padding: 20px;
-    }
-    .video-section {
-      margin-top: 70px;
-
-      .video-thumbnail {
-        height: 250px;
-      }
-    }
-  }
-
-  @media (max-width: 480px) {
-    .testimonials {
-      gap: 15px;
-
-      .happy-investors {
-        padding: 30px;
-        height: auto;
-      }
-
-      .video-section {
-        margin-top: 100px;
-      }
-
-      .testimonials-cover {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 20px;
-
-        .testimonial-card {
-          max-width: 90%;
-          padding: 20px;
-        }
-      }
-      .cta-button {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
-      }
+    .cta-button span {
+      width: 100%; /* Adjust width to fit smaller screen */
+      font-size: 1rem; /* Adjust font size for smaller screens */
     }
   }
 }
 
-@media (max-width: 375px) {
-  .testimonials {
-    padding: 15px;
-
-    .happy-investors {
-      padding: 20px;
-    }
-
-    .investors-info {
-      width: 90%;
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        max-width: 80%;
-        font-size: 1rem;
-      }
-    }
-
-    .video-section {
-      margin-top: 120px;
-    }
-
-    .testimonials-cover {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-}
-
-@media (max-width: 344px) {
-  .testimonials {
-    padding: 10px;
-
-    .happy-investors {
-      padding: 10px;
-    }
-
-    .investors-info {
-      width: 95%;
-      h1 {
-        font-size: 1.8rem;
-      }
-      p {
-        max-width: 90%;
-        font-size: 0.9rem;
-      }
-    }
-
-    .video-section {
-      margin-top: 140px;
-    }
-
-    .testimonials-cover {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .testimonial-card {
-      padding: 15px;
-    }
-
-    .cta-button {
-      font-size: 0.9rem;
-      padding: 0.6rem 1.2rem;
-    }
-  }
-}
+/* Ensure full responsiveness */

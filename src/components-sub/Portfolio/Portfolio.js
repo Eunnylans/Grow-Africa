@@ -100,7 +100,7 @@ const Portfolio = () => {
       </section>
 
      <section className="why-choose-cosmos">
-      <h2>Why choose Cosmos?</h2>
+      <h2>Why choose Grow Africa?</h2>
       <div className="features-container">
         {features.map((feature, index) => (
           <div className="feature-card" key={index}>
@@ -129,7 +129,9 @@ const Portfolio = () => {
         </div>
       ))}
     </div>
-    <a href="/investments" className="see-more">See More &gt;</a>
+    <div className="see-more">
+        <a href="/">See More &gt;</a>
+      </div>
   </section>
 
   <section className="past-investment-section">
@@ -153,7 +155,7 @@ const Portfolio = () => {
 <div className="content">
   <h2>Our Investment Strategy</h2>
   <p>
-    At Cosmos, we prioritize key investment strategies for the
+    At Grow Africa, we prioritize key investment strategies for the
     profitability of both investors and farmers
   </p>
   <div className="strategies">

@@ -85,7 +85,7 @@ const SignIn = () => {
             Don’t have an account?{" "}
             <span onClick={() => navigate("/signup-container")}>Sign Up</span>
           </p>
-          <a href="/not-found">
+          <a href="/dashboard-container">
             {" "}
             <FaArrowLeft size={20} color="#6b8e23" />
           </a>

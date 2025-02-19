@@ -11,18 +11,18 @@ import {
 import "./ROIChart.scss";
 
 const dailyData = [
-  { month: "JAN", roi: 5000 },
-  { month: "FEB", roi: 8000 },
-  { month: "MAR", roi: 6000 },
-  { month: "APR", roi: 7500 },
-  { month: "MAY", roi: 9000 },
-  { month: "JUN", roi: 11000 },
-  { month: "JUL", roi: 10000 },
-  { month: "AUG", roi: 9500 },
-  { month: "SEP", roi: 8700 },
-  { month: "OCT", roi: 9200 },
-  { month: "NOV", roi: 8900 },
-  { month: "DEC", roi: 9700 },
+  { month: "Jan", roi: 50 },
+  { month: "Feb", roi: 80 },
+  { month: "Mar", roi: 60 },
+  { month: "Apr", roi: 75 },
+  { month: "May", roi: 90 },
+  { month: "Jun", roi: 110 },
+  { month: "Jul", roi: 100 },
+  { month: "Aug", roi: 95 },
+  { month: "Sep", roi: 87 },
+  { month: "Oct", roi: 92 },
+  { month: "Nov", roi: 89 },
+  { month: "Dec", roi: 97 },
 ];
 
 const weeklyData = dailyData.map((d) => ({
@@ -99,7 +99,7 @@ const ROIChart = () => {
             value: "ROI",
             angle: -90,
             position: "left",
-            offset: 5, // Moves it further left
+            offset: -1, // Moves it further left
           }}
         />
         
@@ -108,7 +108,7 @@ const ROIChart = () => {
           <Area
             type="monotone"
             dataKey="roi"
-            stroke="#82ca9d"
+            stroke="#6b911b"
             fillOpacity={1}
             fill="url(#colorROI)"
           />

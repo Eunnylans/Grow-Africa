@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
-    console.log("Menu Open:", !isMenuOpen);
+    //console.log("Menu Open:", !isMenuOpen);
   };
 
   const closeMenu = () => {
@@ -29,7 +29,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src={`${process.env.PUBLIC_URL}/GROW Logo.svg`} alt="Logo" />
+      <a href="/" style={{ textDecoration: 'none' }}>
+      <img src={`${process.env.PUBLIC_URL}/GROW Logo.svg`} alt="Logo" />
+    </a>
       </div>
 
       {/* Hamburger Icon */}
@@ -78,7 +80,7 @@ const Navbar = () => {
             className="btn-in"
             onClick={() => {
               closeMenu();
-              navigate("/signin-container");
+              navigate("/coming-soon-backdrop");
             }}
           >
             Log in
@@ -87,7 +89,7 @@ const Navbar = () => {
             className="btn-up"
             onClick={() => {
               closeMenu();
-              navigate("/signup-container");
+              navigate("/coming-soon-backdrop");
             }}
           >
             Sign Up
