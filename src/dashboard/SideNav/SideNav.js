@@ -43,33 +43,27 @@ const SideNav = () => {
           <ul>
             <li>
               <NavLink
-                to="/overview"
+                to="overview"  
                 className={({ isActive }) => (isActive ? "isActive" : "")}
-                onClick={() => {
-                  toggleSidebar();
-                }}
+                onClick={() => toggleSidebar()}
               >
                 <FaChartPie /> Overview
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/investments-container"
+                to="/investments-container"  
                 className={({ isActive }) => (isActive ? "isActive" : "")}
-                onClick={() => {
-                  toggleSidebar();
-                }}
+                onClick={() => toggleSidebar()}
               >
                 <FaUniversity /> Investments
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/wallet-container"
+                to="/wallet-container"  
                 className={({ isActive }) => (isActive ? "isActive" : "")}
-                onClick={() => {
-                  toggleSidebar();
-                }}
+                onClick={() => toggleSidebar()}
               >
                 <FaWallet /> Wallet
               </NavLink>

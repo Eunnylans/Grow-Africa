@@ -5,20 +5,20 @@ import {
   BrowserRouter as Router,
   Routes,
 } from "react-router-dom";
-import Dashboard from "./components-dashboard/Dashboard/Dashboard.js"; // Import Dashboard
-import Investments from "./components-dashboard/Investmentsmain/Investments.js";
-import Overview from "./components-dashboard/Overview/Overview.js";
-import Wallet from "./components-dashboard/Wallet/Wallet.js";
-import ComingSoonPopup from "./components-sub/ComingSoonPopup/ComingSoonPopup.js";
-import AuthFlow from "./components-sub/Password/AuthFlow.js";
-import SignIn from "./components-sub/SignIn/SignIn.js";
-import SignUp from "./components-sub/SignUp/SignUp.js";
+import Dashboard from "./dashboard/Dashboard/Dashboard.js"; // Import Dashboard
+import Investments from "./dashboard/Investmentsmain/Investments.js";
+import Overview from "./dashboard/Overview/Overview.js";
+import Wallet from "./dashboard/Wallet/Wallet.js";
+import ComingSoonPopup from "./auth-routes/ComingSoonPopup/ComingSoonPopup.js";
+import AuthFlow from "./main-components/Password/AuthFlow.js";
+import SignIn from "./auth-routes/SignIn/SignIn.js";
+import SignUp from "./auth-routes/SignUp/SignUp.js";
 import ScrollToTopIcon from "./components/ScrollToTopIcon/ScrollToTopIcon.js";
-import AboutPage from "./mainComponent/AboutPage/AboutPage.js";
-import ContactPage from "./mainComponent/ContactPage/ContactPage.js";
-import LandingPage from "./mainComponent/LandingPage/LandingPage.js";
-import PortfolioPage from "./mainComponent/PortfolioPage/PortfolioPage.js";
-import TestimonialPage from "./mainComponent/TestimonialPage/TestimonialPage.js";
+import AboutPage from "./pages/AboutPage/AboutPage.js";
+import ContactPage from "./pages/ContactPage/ContactPage.js";
+import LandingPage from "./pages/LandingPage/LandingPage.js";
+import PortfolioPage from "./pages/PortfolioPage/PortfolioPage.js";
+import TestimonialPage from "./pages/TestimonialPage/TestimonialPage.js";
 
 import "./styles.scss";
 

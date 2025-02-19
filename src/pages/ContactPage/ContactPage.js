@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Footer from "../../components/Footer/Footer.js";
-import ContactUs from '../../components-sub/ContactUs/ContactUs.js';
+import ContactUs from "../../main-components/ContactUs/ContactUs.js"
 import Navbar from '../../components/Navbar/Navbar.js';
 
 const ContactPage = () => {

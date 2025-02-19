@@ -1,18 +1,18 @@
 import React, { Fragment } from "react";
+import TestimonialMain from "../../main-components/TestimonialMain/TestimonialMain.js";
+import CTASection from "../../components/CTASection/CTASection.js";
 import Footer from "../../components/Footer/Footer.js";
 import Navbar from "../../components/Navbar/Navbar.js";
-import CTASection from '../../components/CTASection/CTASection.js';
-import Portfolio from '../../components-sub/Portfolio/Portfolio.js';
 
-const PortfolioPage = () => {
+const TestimonialPage = () => {
   return (
     <Fragment>
       <Navbar />
-      <Portfolio />
+      <TestimonialMain />
       <CTASection />
       <Footer />
     </Fragment>
   );
 };
 
-export default PortfolioPage;
+export default TestimonialPage;
